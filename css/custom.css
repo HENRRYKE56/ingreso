@@ -1,0 +1,829 @@
+/* your styles go here */
+.punteados{
+    border:solid 2px rgba(0, 0, 0, 0);
+}
+.fondo_login{
+    background-color: #2E5C00;
+    background-image: linear-gradient(0deg, #2E5C00 #50A222);
+}
+.fondo_login .encapsulado{
+    background:url(../images/ondas3.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.login-form{
+    text-align: center;
+    padding: 0px 30px 20px;
+    background-color: rgb(255, 255, 255,0.9);
+    box-shadow: 10px 10px 13px -5px rgba(0,0,0,0.54);
+-webkit-box-shadow: 10px 10px 13px -5px rgba(0,0,0,0.54);
+-moz-box-shadow: 10px 10px 13px -5px rgba(0,0,0,0.54);
+}
+.login-form .loginh2{
+    margin-top: -35px;
+    font-size: 1.6em;
+}
+.login-form .iconlogin{
+    font-size: 4.5rem;
+    color: #135c66 ;
+    position: relative;
+    top: -40px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 3px;
+}
+.login-form .form-group{
+    text-align: left;
+}
+.login-form .form-control{
+    width: 90%;
+    display: inline-block;
+}
+.login-form small{
+    padding-left: 25px;
+}
+.contusuario::before{
+    font-family: "FontAwesome"; content: "\f007 \00a0"; color:#135c66;
+}
+.contcontrasena::before{
+    font-family: "FontAwesome"; content: "\f13e \00a0"; color:#135c66;
+}
+.login-form .checkbox{
+    margin-top: 8px;
+}
+.login-form .btn{
+    border: solid 2px rgb(255, 255, 255,0);
+    font-size: 1.0em;
+    font-weight: bold !important;
+}
+.login-form label {
+    text-transform:none;
+}
+.recupera{
+    border:solid thin rgb(167, 165, 165);
+    padding-top: 30px;
+}
+.modal-content{
+    background-color: rgba(255,255,255,0.7);
+}
+.modal-header{
+    background-color: #fff;
+}
+.encabezado-escudo, .encabezado-logo{
+    height: 50px;
+    margin-bottom: 5px;
+}
+.encabezado-escudo{
+    filter: invert() brightness(80);
+    margin-left: 20px;
+    margin-right: 30px;
+}
+.claro_1 .encabezado-escudo{
+    filter: none;
+}
+.encabezado-login .container-fluid{
+    background:rgb(255, 255, 255,0);
+    padding: 0px !important;
+    min-height: 75px;
+}
+#encabezado-interno{
+    background-color: #2E5C00;
+    background-image: linear-gradient(45deg, #2E5C00, #50A222);
+    padding: 0px !important;
+    min-height: 75px;
+}
+.encabezado-login .container-fluid div:first-child{
+    width: max-content;
+    padding: 10px;
+    text-align: center;
+}
+@media  (max-width: 550px){
+    .encabezado-login .container-fluid div:first-child{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
+.encabezado-login h1{
+    display: inline-flex;
+    font-size: 1.4em;
+    color: #ffffff;
+    vertical-align: bottom;
+    margin-bottom: 8px;
+    margin-top: 7px;
+    margin-left: 20px;
+}
+.resalta_busqueda{
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+#pie_pag{
+    position: relative !important;
+    background-color: #494E54 !important;
+}
+#pie_pag p{
+    color:#fff;
+}
+#pie_pag.oscuro_3{
+    background-color:#061325 !important;
+}
+#pie_pag.claro_3{
+    background-color:#fff !important;
+    border-top: solid medium #2E5C00 !important;
+}
+.pie-logo{
+    height: 60px;
+    filter: invert() brightness(80);
+    margin-bottom: 10px;
+}
+.pie-logo.oscuro_3{
+    background-color: rgb(255, 255, 255,0) !important;
+}
+.pie-logo.claro_3{
+    filter: none;
+}
+main{
+    min-height: 78vh !important;
+}
+.barrabotones{
+    display: inline-flex;
+    width: 100%;
+    color: #fff;
+}
+.claro_1  .barrabotones{
+    color: #2E5C00;
+}
+.barrabotones #i_tog{
+    color: #fff !important;
+}
+.claro_1 .barrabotones #i_tog{
+    color: #2E5C00 !important;
+}
+#encabezado-interno{
+    padding: 0px !important;
+}
+#encabezado-interno #barra_top{
+    margin: 0px !important;
+}
+#encabezado-interno .punteados{
+    border:solid 2px rgba(0, 0, 0, 0);
+}
+#encabezado-interno .encabezado-escudo, #encabezado-interno .encabezado-logo{
+    height: 40px;
+    margin-bottom: 0px;
+    margin-right: 20px;
+}
+#encabezado-interno .encabezado-escudo{
+   margin-left: 0px;
+}
+.encabezado h1{
+    display: inline-flex;
+    font-size: 1.4em;
+    color: #ffffff;
+    vertical-align: bottom;
+    margin-bottom: 0px;
+    margin-top: 7px;
+}
+.claro_1 .encabezado h1{
+    color: #2E5C00;
+}
+.encabezado .brand-text{
+    vertical-align: bottom;
+}
+.encabezado .navbar-header{
+    width: 100%;
+    padding-left: 6px;
+}
+.botones-izquierda{
+    padding: 4px;
+    border: solid thin rgba(255,255,255,0.3);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-left: -17px !important;
+    height: 37px;
+    margin-top: 3px;
+    background-color: rgba(255,255,255,0.2);
+}
+.claro_1 .botones-izquierda{
+    border: solid thin rgba(0,0,0,0.3);
+}
+.oscuro_1 .botones-izquierda{
+    background-color: rgba(0,0,0,1);
+}
+.botones-derecha{
+    width:max-content;
+    text-align: right;
+    padding: 3px;
+    vertical-align:bottom;
+    align-items: baseline;
+    border: solid thin ;
+    border-radius: 10px;
+    margin-top: 7px;
+}
+.botones-derecha .d-flex{
+    display:inline-block !important;
+    width: max-content;
+}
+.botones-derecha #languages{
+    font-size: 1.4em;
+}
+.botones-derecha .nav-link{
+    display: inline !important;
+}
+.encabezado {
+    width: 80% !important;
+    margin: 0px 0px 0px 0px;
+    padding-left: 0px;
+}
+div.navbar .container-fluid {
+    width:max-content;
+    margin-right: 0px;
+}
+@media (min-width: 1200px){
+    .container {
+        max-width: 93%;
+    }
+}
+@media  (max-width: 900px){
+    .botones-derecha .d-flex{
+        width:auto;
+    }
+    .botones-derecha .d-flex .d-flex{
+        width: max-content;
+    }
+}
+@media  (max-width: 830px){
+    .encabezado {
+        width: 70% !important;
+    }
+}
+@media  (max-width: 560px){
+    .encabezado {
+        width: 100% !important;
+    }
+    .botones-derecha{
+        width:100%;
+        border: none;
+        border-radius: 0px;
+        border-top: solid thin;
+    }
+    div.navbar .container-fluid {
+        width:100%;
+    }
+}
+
+ul > li >a:hover i{ 
+    transform:rotate(0deg) !important;
+}
+.fa-spin{
+    animation: none;
+    -webkit-animation: none;
+}
+#d_principal{
+    padding: 20px 20px 40px 40px;
+    background-color: #F4F3EE;
+}
+#d_principal h2{
+    color: #4C4C4C;
+    font-weight: bold;
+    font-size: 1.4em;
+    border-bottom: solid thin #4C4C4C;
+    padding-bottom: 7px;
+    margin-bottom: 20px;
+}
+.breadcrumb{
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0px;
+    margin: 0px 0px 20px 0px;
+    color: #6c757d;
+}
+.breadcrumb li.breadcrumb-item.active {
+    color: #6c757d;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    color: unset;
+}
+.card{
+    box-shadow: none;
+}
+.search_sys{
+    /*border: none;*/
+    /*background-color: rgba(0, 0, 0, 0);*/
+    padding: 20px;
+    margin-top: 10px; margin-bottom:17px;
+}
+.search_sys button{
+    padding: .375rem .75rem !important;
+    border: solid 2px rgba(0, 0, 0, 0) !important;
+    background-color: rgb(8, 95, 8);
+}
+.input-date{
+    min-width: 180px;
+    max-width: 180px;
+}
+.input-text-200{
+    min-width: 200px;
+    width: max-content;
+}
+.input-text-250{
+    min-width: 250px;
+}
+.input-group{
+    /*height: 20px;
+   /* box-sizing: content-box;*/
+}
+#buscabloque{
+    display: flex;
+}
+    #bloquenuevoreg,#buscabloque,#buscabloque2,#bloqueperiodo{
+        margin-bottom: 10px;
+    }
+@media  (max-width: 360px){
+    #buscabloque{
+        display: inline-block;
+    }
+}
+.head-table{
+    background-color: #666;
+    color: #ffffff;
+    margin-bottom: 12px;
+    padding: 10px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    max-width:max-content;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.div_tabla_sys{
+    border:solid 1px #666;
+    border-top:solid 2px #666;
+    border-radius: 0%;
+
+}
+.table-responsive{
+    border:solid thin rgba(0,0,0,.125);
+    min-height: fit-content;
+    padding-bottom: 150px;
+}
+
+/* MENÚ Estilos Generales: */
+#panel_menu .heading{
+    width: 100%;
+    font-weight: bold;
+    margin-left: 0px;
+}
+#panel_menu .sidebar-header{
+    margin-bottom: 10px;
+}
+  nav.side-navbar ul li a {
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+    position: relative;
+    overflow: hidden;
+    font-weight: unset;
+    border-left:solid 0px rgba(0, 0, 0, 0) !important;
+    border-right:dotted 0px rgba(0, 0, 0, 0) !important;
+}
+nav.side-navbar a:hover{
+    font-weight: normal !important;
+}
+nav.side-navbar a:focus{
+    font-weight: normal !important;
+}
+nav.side-navbar ul li a:hover:after {
+    right: 0;
+}
+nav.side-navbar ul li li a {
+    padding-left: 50px;
+}
+nav.side-navbar ul li a:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    height: 4px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.selector_menu_color{
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    border-radius: 20%;
+    margin: 3px;
+}
+/* MENÚ Colores Iniciales: */
+.selector_menu_color.menu_verde{
+    background-color: rgb(46,92,0);
+}
+#panel_menu, #panel_menu .heading, #panel_menu ul li a{
+    color: #000;
+}
+#panel_menu .heading{
+    color: rgb(46,92,0);
+}
+#panel_menu .sidebar-header{
+    background-color: rgb(46,92,0);
+    border-top: solid 2px #fff;
+    color: #fff;
+}
+#panel_menu .sidebar-header .title p{
+    color: #fff;
+}
+#panel_menu ul li a {
+    color: #333;
+}
+#panel_menu .menu_actual{
+    background-color: rgb(46,92,0,0.4) !important;
+}
+#panel_menu a:hover{
+    background-color: rgb(46,92,0,0.3) !important;
+    color:#000 !important;
+}
+#panel_menu a:focus{
+    background-color: rgb(46,92,0,0.2) !important;
+    color:#333 !important;
+}
+#panel_menu a[aria-expanded="true"], #panel_menu ul li li a {
+    background: rgb(46,92,0,0.1);
+}
+#panel_menu ul li a:after {
+    background:rgb(46,92,0,1);
+}
+#panel_menu .border-bottom {
+    border-bottom: 1px solid rgb(46,92,0,0.3) !important;
+}
+#panel_menu .list-unstyled li:last-child a.border-bottom{
+    border-bottom: 5px solid rgb(46,92,0,0.5)!important;
+}
+
+/* MENÚ Colores Iniciales (OSCURO): */
+#panel_menu.menu_oscuro{
+    background-color: rgb(46,92,0);
+}
+#panel_menu.menu_oscuro .sidebar-header{
+    background-color:unset;
+}
+#panel_menu.menu_oscuro, #panel_menu.menu_oscuro .heading, #panel_menu.menu_oscuro ul li a{
+    color: #fff;
+}
+#panel_menu.menu_oscuro .menu_actual{
+    background-color: rgb(255,255,255,0.4) !important;
+}
+#panel_menu.menu_oscuro a:hover{
+    background-color: rgb(255,255,255,0.3) !important;
+    color:#fff !important;
+}
+#panel_menu.menu_oscuro a:focus{
+    background-color: rgb(255,255,255,0.2) !important;
+    color:#fff !important;
+}
+#panel_menu.menu_oscuro a[aria-expanded="true"], #panel_menu.menu_oscuro ul li li a {
+    background: rgb(255,255,255,0.1);
+}
+#panel_menu.menu_oscuro ul li a:after {
+    background:rgb(255,255,255,1);
+}
+#panel_menu.menu_oscuro .border-bottom {
+    border-bottom: 1px solid rgb(255,255,255,0.3) !important;
+}
+#panel_menu.menu_oscuro .list-unstyled li:last-child a.border-bottom{
+    border-bottom: 5px solid rgb(255,255,255,0.5)!important;
+}
+
+/* MENÚ Colores Iniciales (CLARO): */
+#panel_menu.menu_claro, #panel_menu.menu_claro .sidebar-header{
+    background-color: unset;
+}
+#panel_menu.menu_claro, #panel_menu.menu_claro .heading, #panel_menu.menu_claro ul li a, #panel_menu.menu_claro .sidebar-header, #panel_menu.menu_claro .sidebar-header .title p{
+    color: rgb(46,92,0);
+}
+#panel_menu.menu_claro .menu_actual{
+    background-color: rgb(0,0,0,0.2) !important;
+}
+#panel_menu.menu_claro a:hover{
+    background-color: rgba(0,0,0, 0.1) !important;
+    color:rgb(46,92,0)!important;
+}
+#panel_menu.menu_claro a:focus{
+    background-color: rgb(0,0,0,0.07) !important;
+    color:rgb(46,92,0)!important;
+}
+#panel_menu.menu_claro a[aria-expanded="true"], #panel_menu.menu_claro ul li li a {
+    background: rgb(0,0,0,0.05);
+}
+#panel_menu.menu_claro ul li a:after {
+    background:rgb(46,92,0,0.5);
+}
+#panel_menu.menu_claro .border-bottom {
+    border-bottom: 1px solid rgb(0,0,0,0.3) !important;
+}
+#panel_menu.menu_claro .list-unstyled li:last-child a.border-bottom{
+    border-bottom: 5px solid rgb(0,0,0,0.2)!important;
+}
+
+/* Menú Aqua: */
+#panel_menu.menu_aqua:not(.menu_oscuro, .menu_claro) .heading{
+    color: rgb(3,88,89);
+}
+#panel_menu.menu_aqua:not(.menu_oscuro, .menu_claro) .sidebar-header, .selector_menu_color.menu_aqua{
+    background-color: rgb(3,88,89);
+}
+#panel_menu.menu_aqua:not(.menu_oscuro, .menu_claro) .menu_actual{
+    background-color: rgb(3,88,89,0.4) !important;
+}
+#panel_menu.menu_aqua:not(.menu_oscuro, .menu_claro) a:hover{
+    background-color: rgb(3,88,89,0.3) !important;
+}
+#panel_menu.menu_aqua:not(.menu_oscuro, .menu_claro) a:focus{
+    background-color: rgb(3,88,89,0.2) !important;
+}
+#panel_menu.menu_aqua:not(.menu_oscuro, .menu_claro) a[aria-expanded="true"], #panel_menu.menu_aqua:not(.menu_oscuro, .menu_claro) ul li li a {
+    background: rgb(3,88,89,0.1);
+}
+#panel_menu.menu_aqua:not(.menu_oscuro, .menu_claro) ul li a:after {
+    background:rgb(3,88,89,1);
+}
+#panel_menu.menu_aqua:not(.menu_oscuro, .menu_claro) .border-bottom {
+    border-bottom: 1px solid rgb(3,88,89,0.3) !important;
+}
+#panel_menu.menu_aqua:not(.menu_oscuro, .menu_claro) .list-unstyled li:last-child a.border-bottom{
+    border-bottom: 5px solid rgb(3,88,89,0.5)!important;
+}
+
+/* Menú Aqua (OSCURO): */
+#panel_menu.menu_oscuro.menu_aqua{
+    background-color: rgb(3,88,89);
+}
+
+/* Menú Aqua (CLARO): */
+#panel_menu.menu_claro.menu_aqua, #panel_menu.menu_claro.menu_aqua .heading, #panel_menu.menu_claro.menu_aqua ul li a, #panel_menu.menu_claro.menu_aqua .sidebar-header, #panel_menu.menu_claro.menu_aqua .sidebar-header .title p, #panel_menu.menu_claro.menu_aqua a:hover, #panel_menu.menu_claro.menu_aqua a:focus{
+    color: rgb(3,88,89) !important;
+}
+#panel_menu.menu_claro.menu_aqua ul li a:after {
+    background:rgb(3,88,89,0.5);
+}
+
+/* Menú Rojo: */
+#panel_menu.menu_rojo:not(.menu_oscuro, .menu_claro) .heading{
+    color: rgb(140,0,0);
+}
+#panel_menu.menu_rojo:not(.menu_oscuro, .menu_claro) .sidebar-header, .selector_menu_color.menu_rojo{
+    background-color: rgb(140,0,0);
+}
+#panel_menu.menu_rojo:not(.menu_oscuro, .menu_claro) .menu_actual{
+    background-color: rgb(140,0,0,0.4) !important;
+}
+#panel_menu.menu_rojo:not(.menu_oscuro, .menu_claro) a:hover{
+    background-color: rgb(140,0,0,0.3) !important;
+}
+#panel_menu.menu_rojo:not(.menu_oscuro, .menu_claro) a:focus{
+    background-color: rgb(140,0,0,0.2) !important;
+}
+#panel_menu.menu_rojo:not(.menu_oscuro, .menu_claro) a[aria-expanded="true"], #panel_menu.menu_rojo:not(.menu_oscuro, .menu_claro) ul li li a {
+    background: rgb(140,0,0,0.1);
+}
+#panel_menu.menu_rojo:not(.menu_oscuro, .menu_claro) ul li a:after {
+    background:rgb(140,0,0,1);
+}
+#panel_menu.menu_rojo:not(.menu_oscuro, .menu_claro) .border-bottom {
+    border-bottom: 1px solid rgb(140,0,0,0.3) !important;
+}
+#panel_menu.menu_rojo:not(.menu_oscuro, .menu_claro) .list-unstyled li:last-child a.border-bottom{
+    border-bottom: 5px solid rgb(140,0,0,0.5)!important;
+}
+
+/* Menú Rojo (OSCURO): */
+#panel_menu.menu_oscuro.menu_rojo{
+    background-color: rgb(140,0,0);
+}
+
+/* Menú Rojo (CLARO): */
+#panel_menu.menu_claro.menu_rojo, #panel_menu.menu_claro.menu_rojo .heading, #panel_menu.menu_claro.menu_rojo ul li a, #panel_menu.menu_claro.menu_rojo .sidebar-header, #panel_menu.menu_claro.menu_rojo .sidebar-header .title p, #panel_menu.menu_claro.menu_rojo a:hover, #panel_menu.menu_claro.menu_rojo a:focus{
+    color: rgb(140,0,0) !important;
+}
+#panel_menu.menu_claro.menu_rojo ul li a:after {
+    background:rgb(140,0,0,0.5);
+}
+
+/* Menú Azul: */
+#panel_menu.menu_azul:not(.menu_oscuro, .menu_claro) .heading{
+    color: rgb(23,82,134);
+}
+#panel_menu.menu_azul:not(.menu_oscuro, .menu_claro) .sidebar-header, .selector_menu_color.menu_azul{
+    background-color: rgb(23,82,134);
+}
+#panel_menu.menu_azul:not(.menu_oscuro, .menu_claro) .menu_actual{
+    background-color: rgb(23,82,134,0.4) !important;
+}
+#panel_menu.menu_azul:not(.menu_oscuro, .menu_claro) a:hover{
+    background-color: rgb(23,82,134,0.3) !important;
+}
+#panel_menu.menu_azul:not(.menu_oscuro, .menu_claro) a:focus{
+    background-color: rgb(23,82,134,0.2) !important;
+}
+#panel_menu.menu_azul:not(.menu_oscuro, .menu_claro) a[aria-expanded="true"], #panel_menu.menu_azul:not(.menu_oscuro, .menu_claro) ul li li a {
+    background: rgb(23,82,134,0.1);
+}
+#panel_menu.menu_azul:not(.menu_oscuro, .menu_claro) ul li a:after {
+    background:rgb(23,82,134,1);
+}
+#panel_menu.menu_azul:not(.menu_oscuro, .menu_claro) .border-bottom {
+    border-bottom: 1px solid rgb(23,82,134,0.3) !important;
+}
+#panel_menu.menu_azul:not(.menu_oscuro, .menu_claro) .list-unstyled li:last-child a.border-bottom{
+    border-bottom: 5px solid rgb(23,82,134,0.5)!important;
+}
+
+/* Menú Azul (OSCURO): */
+#panel_menu.menu_oscuro.menu_azul{
+    background-color: rgb(23,82,134);
+}
+
+/* Menú Azul (CLARO): */
+#panel_menu.menu_claro.menu_azul, #panel_menu.menu_claro.menu_azul .heading, #panel_menu.menu_claro.menu_azul ul li a, #panel_menu.menu_claro.menu_azul .sidebar-header, #panel_menu.menu_claro.menu_azul .sidebar-header .title p, #panel_menu.menu_claro.menu_azul a:hover, #panel_menu.menu_claro.menu_azul a:focus{
+    color: rgb(23,82,134) !important;
+}
+#panel_menu.menu_claro.menu_azul ul li a:after {
+    background:rgb(23,82,134,0.5);
+}
+
+/* Menú Morado: */
+#panel_menu.menu_morado:not(.menu_oscuro, .menu_claro) .heading{
+    color: rgb(75,43,109);
+}
+#panel_menu.menu_morado:not(.menu_oscuro, .menu_claro) .sidebar-header, .selector_menu_color.menu_morado{
+    background-color: rgb(75,43,109);
+}
+#panel_menu.menu_morado:not(.menu_oscuro, .menu_claro) .menu_actual{
+    background-color: rgb(75,43,109,0.4) !important;
+}
+#panel_menu.menu_morado:not(.menu_oscuro, .menu_claro) a:hover{
+    background-color: rgb(75,43,109,0.3) !important;
+}
+#panel_menu.menu_morado:not(.menu_oscuro, .menu_claro) a:focus{
+    background-color: rgb(75,43,109,0.2) !important;
+}
+#panel_menu.menu_morado:not(.menu_oscuro, .menu_claro) a[aria-expanded="true"], #panel_menu.menu_morado:not(.menu_oscuro, .menu_claro) ul li li a {
+    background: rgb(75,43,109,0.1);
+}
+#panel_menu.menu_morado:not(.menu_oscuro, .menu_claro) ul li a:after {
+    background:rgb(75,43,109,1);
+}
+#panel_menu.menu_morado:not(.menu_oscuro, .menu_claro) .border-bottom {
+    border-bottom: 1px solid rgb(75,43,109,0.3) !important;
+}
+#panel_menu.menu_morado:not(.menu_oscuro, .menu_claro) .list-unstyled li:last-child a.border-bottom{
+    border-bottom: 5px solid rgb(75,43,109,0.5)!important;
+}
+
+/* Menú Morado (OSCURO): */
+#panel_menu.menu_oscuro.menu_morado{
+    background-color: rgb(75,43,109);
+}
+
+/* Menú Morado (CLARO): */
+#panel_menu.menu_claro.menu_morado, #panel_menu.menu_claro.menu_morado .heading, #panel_menu.menu_claro.menu_morado ul li a, #panel_menu.menu_claro.menu_morado .sidebar-header, #panel_menu.menu_claro.menu_morado .sidebar-header .title p, #panel_menu.menu_claro.menu_morado a:hover, #panel_menu.menu_claro.menu_morado a:focus{
+    color: rgb(75,43,109) !important;
+}
+#panel_menu.menu_claro.menu_morado ul li a:after {
+    background:rgb(75,43,109,0.5);
+}
+
+/* Menú Café: */
+#panel_menu.menu_cafe:not(.menu_oscuro, .menu_claro) .heading{
+    color: rgb(150,57,39);
+}
+#panel_menu.menu_cafe:not(.menu_oscuro, .menu_claro) .sidebar-header, .selector_menu_color.menu_cafe{
+    background-color: rgb(150,57,39);
+}
+#panel_menu.menu_cafe:not(.menu_oscuro, .menu_claro) .menu_actual{
+    background-color: rgb(150,57,39,0.4) !important;
+}
+#panel_menu.menu_cafe:not(.menu_oscuro, .menu_claro) a:hover{
+    background-color: rgb(150,57,39,0.3) !important;
+}
+#panel_menu.menu_cafe:not(.menu_oscuro, .menu_claro) a:focus{
+    background-color: rgb(150,57,39,0.2) !important;
+}
+#panel_menu.menu_cafe:not(.menu_oscuro, .menu_claro) a[aria-expanded="true"], #panel_menu.menu_cafe:not(.menu_oscuro, .menu_claro) ul li li a {
+    background: rgb(150,57,39,0.1);
+}
+#panel_menu.menu_cafe:not(.menu_oscuro, .menu_claro) ul li a:after {
+    background:rgb(150,57,39,1);
+}
+#panel_menu.menu_cafe:not(.menu_oscuro, .menu_claro) .border-bottom {
+    border-bottom: 1px solid rgb(150,57,39,0.3) !important;
+}
+#panel_menu.menu_cafe:not(.menu_oscuro, .menu_claro) .list-unstyled li:last-child a.border-bottom{
+    border-bottom: 5px solid rgb(150,57,39,0.5)!important;
+}
+
+/* Menú Café (OSCURO): */
+#panel_menu.menu_oscuro.menu_cafe{
+    background-color: rgb(150,57,39);
+}
+
+/* Menú Café (CLARO): */
+#panel_menu.menu_claro.menu_cafe, #panel_menu.menu_claro.menu_cafe .heading, #panel_menu.menu_claro.menu_cafe ul li a, #panel_menu.menu_claro.menu_cafe .sidebar-header, #panel_menu.menu_claro.menu_cafe .sidebar-header .title p, #panel_menu.menu_claro.menu_cafe a:hover, #panel_menu.menu_claro.menu_cafe a:focus{
+    color: rgb(150,57,39) !important;
+}
+#panel_menu.menu_claro.menu_cafe ul li a:after {
+    background:rgb(150,57,39,0.5);
+}
+
+/* Menú Negro: */
+#panel_menu.menu_negro:not(.menu_oscuro, .menu_claro) .heading{
+    color: rgb(0,0,0);
+}
+#panel_menu.menu_negro:not(.menu_oscuro, .menu_claro) .sidebar-header, .selector_menu_color.menu_negro{
+    background-color: rgb(0,0,0);
+}
+#panel_menu.menu_negro:not(.menu_oscuro, .menu_claro) .menu_actual{
+    background-color: rgb(0,0,0,0.4) !important;
+}
+#panel_menu.menu_negro:not(.menu_oscuro, .menu_claro) a:hover{
+    background-color: rgb(0,0,0,0.3) !important;
+}
+#panel_menu.menu_negro:not(.menu_oscuro, .menu_claro) a:focus{
+    background-color: rgb(0,0,0,0.2) !important;
+}
+#panel_menu.menu_negro:not(.menu_oscuro, .menu_claro) a[aria-expanded="true"], #panel_menu.menu_negro:not(.menu_oscuro, .menu_claro) ul li li a {
+    background: rgb(0,0,0,0.1);
+}
+#panel_menu.menu_negro:not(.menu_oscuro, .menu_claro) ul li a:after {
+    background:rgb(0,0,0,1);
+}
+#panel_menu.menu_negro:not(.menu_oscuro, .menu_claro) .border-bottom {
+    border-bottom: 1px solid rgb(0,0,0,0.3) !important;
+}
+#panel_menu.menu_negro:not(.menu_oscuro, .menu_claro) .list-unstyled li:last-child a.border-bottom{
+    border-bottom: 5px solid rgb(0,0,0,0.5)!important;
+}
+
+/* Menú Negro (OSCURO): */
+#panel_menu.menu_oscuro.menu_negro{
+    background-color: rgb(0,0,0);
+}
+
+/* Menú Negro (CLARO): */
+#panel_menu.menu_claro.menu_negro, #panel_menu.menu_claro.menu_negro .heading, #panel_menu.menu_claro.menu_negro ul li a, #panel_menu.menu_claro.menu_negro .sidebar-header, #panel_menu.menu_claro.menu_negro .sidebar-header .title p, #panel_menu.menu_claro.menu_negro a:hover, #panel_menu.menu_claro.menu_negro a:focus{
+    color: rgb(0,0,0) !important;
+}
+#panel_menu.menu_claro.menu_negro ul li a:after {
+    background:rgb(0,0,0,0.5);
+}
+
+/*ESTILOS CARRUSEL:*/
+.carousel{
+    border:solid thin #ffffff;
+    background-color: #fff;
+}
+#div-carousel{
+    margin: 50px 0px 40px;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: #333;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    border: solid 5px #333;
+}
+.carousel-indicators{
+    /*position: relative;*/
+    bottom: -30px;
+}
+.carousel-indicators li{
+    background-color:rgb(255,255,255,0.5);
+    height: 26px;
+    text-indent: 0px;
+    border:solid thin #333;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.3);
+-webkit-box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.3);
+-moz-box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.3);
+}
+.carousel-indicators li.active{
+    background-color: #333;
+    color: #fff;
+    border-color: #fff;
+}
+.carousel-caption{
+    background-color:rgba(0, 0, 0, 0.6);
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+}

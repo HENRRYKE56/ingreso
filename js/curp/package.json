@@ -1,0 +1,27 @@
+{
+  "name": "curp.js",
+  "version": "0.1.1",
+  "description": "Función para generar el CURP, de acuerdo a las especificaciones oficiales.",
+  "main": "curp.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prestigos/curp.js"
+  },
+  "keywords": [
+    "CURP",
+    "mexico"
+  ],
+  "author": "Christopher Luna <dev@christopher-luna.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prestigos/curp.js/issues"
+  },
+  "homepage": "https://github.com/prestigos/curp.js",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-jslint": "^1.1.12"
+  }
+}
