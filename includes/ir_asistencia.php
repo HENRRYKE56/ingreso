@@ -61,7 +61,8 @@ if ($str_check) {
         $strWhere = "Where";
         $a_order = array();
         $intWLblEntidad = 900;
-
+        $reporte_val=array(1,2);
+        $reporte_des=array('Asistencia','Incidencias');
         $a_separs = array();
       //  $a_separs[] = array(0, 'Criterios para generar reporte', 6, $CFG_BGC[10]);
         $field[] = array('idopc', 'idopc', '1', 'hidden', '1', '', 'int', 1, 200, 10, 2, '', 0, 1, 1, '');
@@ -69,8 +70,9 @@ if ($str_check) {
 //         $conf_funciones="function valid_fecha() {
 //            }";
         $conf_funciones = "";
-        $field[] = array('tipo_reporte', 'Tipo de Reporte', '1', 'select', '1', array(array(1,2),array('Asistencia','Incidencias')), 'char', '', 100, 10, 0, '', 1, array(1, 'col-12 col-sm-12','col-12 col-sm-6'));        
-         $a_check = array();
+       $field[]=array('tipo_reporte','Tipo de Reporte','1','select','2',array($reporte_val,$reporte_des),'int',0,200,20,2,'',1,array(1, 'col-12 col-sm-12','col-12 col-sm-6'),array(1,1,4));
+	
+        $a_check = array();
         $a_check[] = array(1, array('idopc','tipo_reporte' ));        
 
         for ($x = 0; $x < 10; $x++) {

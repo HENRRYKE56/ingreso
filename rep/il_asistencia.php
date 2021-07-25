@@ -130,7 +130,7 @@ if ($classval->NumReg > 0) {
     
 // // des_marca des_tipo_vehiculo   modelo   placas   num_serie
     $str_Fields = "sala,des_usuario,asistencia,total,link_clase";
-    $a_getl_fields = array('sala','Responsable de la Sala','asistencia','total','Link');
+    $a_getl_fields = array('Sala','Responsable de la Sala','Asistencia','Total','Link');
 
 
     $a_getv_fields = array(' ', ' ', ' ', ' ', ' ', ' ');
@@ -161,7 +161,7 @@ if ($classval->NumReg > 0) {
     if (strlen(trim($str_pcWhere)) > 0)
         $str_pcWhere = " WHERE " . $str_pcWhere;
 
-    $str_Qry = "SELECT sala,b.des_usuario,COUNT(asistencia)asistencia,COUNT(a.nombre)total,link_clase
+    $str_Qry = "SELECT sala,concat(des_usuario, '  Cel: ',email)des_usuario,COUNT(asistencia)asistencia,COUNT(a.nombre)total,link_clase
     FROM alumnos_ingreso a
     INNER join sb_usuario b ON a.sala=b.cveuni
     GROUP BY a.sala";
