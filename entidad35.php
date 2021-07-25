@@ -729,7 +729,8 @@ $impresion.='<div class="card-body">
                     case 'join':
 
                         break;
-                    case 'f_archivo': echo genCol($classent->$afield[0] . '<a target="_blank" href="' . $classent->ruta . $classent->$afield[0] . '"><img style="4em;height:3em;" src="' . $classent->ruta . $classent->$afield[0] . '" alt="" class="img-thumbnail"></a>', '', '', '', '', '', '', '', '','',''," headers='c_".$count_fields."'");
+                    case 'f_archivo': echo genCol($classent->$afield[0] . '<a target="_blank" href="' . $classent->ruta . $classent->$afield[0] . '">
+                    <img style="4em;height:3em;" src="' . $classent->ruta . $classent->$afield[0] . '" alt="" class="img-thumbnail"></a>', '', '', '', '', '', '', '', '','',''," headers='c_".$count_fields."'");
                         break;
                     default:
                         if (isset($afield[18]) && $afield[18] == 1) {
@@ -771,6 +772,60 @@ $impresion.='<div class="card-body">
                                                             ($CFG_STYLE[6] . ' ' . $CFG_FSIZE[0] . ' ' . $CFG_FCOLOR[1]) : ($CFG_STYLE[6] . ' ' . $CFG_FSIZE[0] . ' ' . $CFG_FCOLOR[1]))), '','', " id='" . $afield[0] . $i . "'"," headers='c_".$count_fields."'");
                         }
                         break;
+
+ case 'f_archivo': echo genCol($classent->$afield[0] . '<a target="_blank" href="' . $classent->ruta . $classent->$afield[0] . '">
+                    <img style="4em;height:3em;" src="' . $classent->ruta . $classent->$afield[0] . '" alt="" class="img-thumbnail"></a>', '', '', '', '', '', '', '', '','',''," headers='c_".$count_fields."'");
+                        break;
+
+
+                        case 'f_archivo1': echo genCol($classent->$afield[0] . '<a target="_blank" href="' . $classent->ruta . $classent->$afield[0] . '">
+                        <img style="4em;height:3em;" src="images/carousel/img07.gif" alt="" class="img-thumbnail"></a>', '', '', '', '', '', '', '', '','',''," headers='c_".$count_fields."'");
+                            break;
+
+
+                    default:
+                        if (isset($afield[18]) && $afield[18] == 1) {
+                            $str_implodevalues = "";
+                            echo genOCol('', '', '', '', $afield[8], '', $CFG_LBL[30], '', ''," headers='c_".$count_fields."'");
+                            foreach ($afield[19][0] as $count_int_aafield => $int_aafield) {
+                                if ($count_int_aafield > 0)
+                                    $str_implodevalues.=$afield[19][1];
+                                $str_implodevalues.=$classent->$field[$int_aafield][0];
+                            }
+                            echo $str_implodevalues;
+                            echo genCCol();
+                        } else {
+
+                            //$strFieldValue = str_replace("\n", "<br/>", ($afield[6] == 'date' ? implode('/', array_reverse(explode('-', $classent->$afield[0]))) : $classent->$afield[0]));
+                            $strFieldValue = $classent->$afield[0];
+                            if (strlen($strFieldValue) == 0)
+                                $strFieldValue = "&nbsp;";
+                            if (isset($afield[23]) and strlen(trim($afield[23])) > 0) {
+                                eval("\$strFieldValue=" . $afield[23] . '(' . $classent->$afield[0] . ');');
+                            }
+                            if (strlen($strFieldValue) > 120) {
+                                $strFieldValue = "<div class=\"div11px\"><div id=\"id_col" . $afield[0] . "_div" . $i . "\">" . substr($strFieldValue, 0, 120) . "</div>" .
+                                        "&nbsp;&nbsp;<a href=\"javascript:ver('id_col" . $afield[0] . "_span" . $i . "','id_col" . $afield[0] . "_div" . $i . "')\" style=\"font-size:10px;text-decoration:none;\" >[+/-]" . $afield[0] . "</a>" .
+                                        formatDiv('id_col' . $afield[0] . '_span' . $i, str_replace("\n", "<br/>", $strFieldValue), $descripcion, $i, "span11px") . "</div>";
+                            }
+                        
+                            echo genCol(str_replace("\n", '<br>', $strFieldValue) . ((isset($a_pop_e3) && in_array($afield[0], $a_pop_e3)) ? (strlen($strFieldValue) > 0 ? '&nbsp;' : '') . "<a style=\"" .
+                                            "color:black;\" class='punteados' role='button' aria-label='Mostrar ventana ".$a_popTitle_e3[array_search($afield[0], $a_pop_e3)]."' href=\"#\" onClick=\"toolTipAdd2('<img src=img/arrow_green.gif border=0 > cargando datos ...',this,'" .
+                                            $a_popTitle_e3[array_search($afield[0], $a_pop_e3)] .
+                                            "','toolTipBox','" . $a_popContent_e3[array_search($afield[0], $a_pop_e3)] .
+                                            "','" . $a_popObVal_e3[array_search($afield[0], $a_pop_e3)] . $i . "','" . $strKeysRow . "'," . $a_popPos_e3[array_search($afield[0], $a_pop_e3)] . "," . $__SESSION->getValueSession('mod') . "); return true;\"  alt=\"" . $a_popTitle_e3[array_search($afield[0], $a_pop_e3)] . "\"><img src=\"img/editfld.gif\" border='0' " .
+                                            " alt=\"" . $a_popTitle_e3[array_search($afield[0], $a_pop_e3)] . "\" ></a>" : ""), '', '', '', (isset($afield[21]) && strlen($afield[21]) > 0) ?
+                                            ((isset($a_filed_bg_color) and sizeof($a_filed_bg_color) > 0 and in_array($afield[0], $a_filed_bg_color) and $boolSetColor) ? $strSetColor : $afield[21]) :
+                                            (isset($a_alertas) and ( in_array($afield[0], $a_alertas) && $classent->$afield[0] > $a_bg_alertas[$afield[0]][1]) ? $a_bg_alertas[$afield[0]][2] : '')
+                                    , $afield[8], '', (isset($afield[22]) && strlen($afield[22]) > 0) ?
+                                            ((isset($a_filed_bg_color) and sizeof($a_filed_bg_color) > 0 and in_array($afield[0], $a_filed_bg_color) and $boolSetColor) ? $strSetStyle : $afield[22]) : (($afield[6] == 'money' or $afield[6] == 'int') ?
+                                                    ($CFG_STYLE[6] . ' ' . $CFG_FSIZE[0] . ' ' . $CFG_FCOLOR[1]) : (($afield[6] == 'date' or $afield[6] == 'email') ?
+                                                            ($CFG_STYLE[6] . ' ' . $CFG_FSIZE[0] . ' ' . $CFG_FCOLOR[1]) : ($CFG_STYLE[6] . ' ' . $CFG_FSIZE[0] . ' ' . $CFG_FCOLOR[1]))), '','', " id='" . $afield[0] . $i . "'"," headers='c_".$count_fields."'");
+                        }
+                        break;
+
+
+
                 }
             }
         }

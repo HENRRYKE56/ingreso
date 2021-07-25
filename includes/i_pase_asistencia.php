@@ -41,12 +41,14 @@ if ($classval->NumReg>0){
 	$strWhere="Where ";
 	$a_order=array();
         
-
+	if ($strWhere=="Where ")
+		$strWhere="";
        
 	
 			$tablas_c='alumnos_ingreso';
 			$a_order[]=$id_prin;
-	
+
+			
 if($__SESSION->getValueSession('cveunidad')==0){
 	$strWhere="";
 }
@@ -56,13 +58,12 @@ $strWhere="Where  sala=".$__SESSION->getValueSession('cveunidad');
 
 			/******termina condicion de busqueda*/
                                                
-	if ($strWhere=="Where ")
-		$strWhere="";
+
 	//$strWhere.=" prioridad.estado <> FALSE";
 	//$items0='perfil.*';
 	$tabla='alumnos_ingreso';
 	$strDistintic="SELECT count(*) as count_r  FROM alumnos_ingreso ".$strWhere;
-	$intlimit=20;
+	$intlimit=2000;
 	$a_separs=array();
 	$a_separs[]=array(1,'datos generales',3,'separ_verde');
 		
@@ -76,6 +77,10 @@ $strWhere="Where  sala=".$__SESSION->getValueSession('cveunidad');
 	  $field[]=array('sala','Sala','1','label','1','','char',"",350,200,0,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
 	  $field[]=array('asistencia','Asistencia','1','text','1','','char',0,400,20,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
 	  $field[]=array('observaciones','Observaciones','1','text','1','','char',0,400,20,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
+	  $field[]=array('link_clase','Link de la Clase','1','f_archivo1','1','','char',0,400,20,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
+	  $field[]=array('ruta','ruta','1','hidden','1','','char',0,400,20,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
+	 
+	 
 	  $keyFieldsPop = array('cve_alumno');
 
 
@@ -85,7 +90,7 @@ $strWhere="Where  sala=".$__SESSION->getValueSession('cveunidad');
 	$setdel='';
 	$keyFields=array('cve_alumno');
 	$keyTypeFields=array('num');	//int,text
-	$array_noprint_ent=array('null');
+	$array_noprint_ent=array('ruta');
 	$rwitem='null';
 	$suma_width=0;
 	$strwentidad="entidad35.php";
