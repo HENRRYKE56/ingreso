@@ -8,12 +8,12 @@ header("Pragma: ");
 header("Cache-Control: ");
 
 //header ("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-//header ("Last-Modified: " . gmdate("D,d M YH:i:s") . " GMT");
+header ("Last-Modified: " . gmdate("D,d M YH:i:s") . " GMT");
 //header ("Cache-Control: no-cache, must-revalidate");
 //header ("Pragma: no-cache");
 header ("Content-type: application/vnd.ms-excel");
 //header ("Content-type: application/x-msexcel");
-header ("Content-Disposition: attachment; filename=glo_".$__SESSION->getValueSession('nomusuario').".xls" );
+header ("Content-Disposition: attachment; filename=glo_".$__SESSION->getValueSession('nomusuario').".xlsx" );
 //header ("Content-Description: PHP/INTERBASE Generated Data" );
 ?>
 <head>
@@ -77,7 +77,7 @@ body{
 }
 
 </style>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title></title>
 </head>
 <body>
