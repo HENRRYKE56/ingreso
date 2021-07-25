@@ -554,7 +554,8 @@ $impresion.='<div class="card-body">
                     if (isset($$stridniv)) {
                         $var_n = (isset(${"str_titleniv" . $nx}) ? ${"str_titleniv" . $nx} : "") . "";
                         $var_n_e = (isset(${"str_estilo" . $nx}) ? ${"str_estilo" . $nx} : "") . "";
-                        $icon_niveles.="<a style='display: inline-block;' class='dropdown-item punteados a_sub_nivel_sys' id='menu_sub_n_" . $i . "' href='" . $str_href . $trs_ref_add . "'><span><i id='sub_icon_".$i."_".$nx."' style='" . $var_n_e . "' class='" . (isset($$stridniv) ? $$stridniv : "") . "'></i>&nbsp;&nbsp;" . ($var_n) . "</span></a>";
+                        $icon_niveles.="<a style='display: inline-block;' class='dropdown-item punteados a_sub_nivel_sys' id='menu_sub_n_" . $i . "' href='" . $str_href . $trs_ref_add . "'>
+                        <span><i id='sub_icon_".$i."_".$nx."' style='" . $var_n_e . "' class='" . (isset($$stridniv) ? $$stridniv : "") . "'></i>&nbsp;&nbsp;" . ($var_n) . "</span></a>";
                     }
                 }
                 echo '<div class="dropdown sub_menu_sys">
@@ -563,7 +564,9 @@ $impresion.='<div class="card-body">
                         </button>
                         <div class="dropdown-menu sub_menu_sys" aria-labelledby="submen35' . $i . '">';
                 echo $icon_niveles . $str_print;
-                echo '      <a class="dropdown-item punteados a_sub_nivel_sys" style="border-top: 1px solid #A6A6A6;" href="#"><i class="fa fa-window-close" style="color:red;"></i>&nbsp;&nbsp;Cerrar men&uacute;</a>';
+                echo '      <a class="dropdown-item punteados a_sub_nivel_sys" style="border-top: 1px solid #A6A6A6;" href="#">
+                        <i class="fa fa-window-close" style="color:red;"></i>
+                            &nbsp;&nbsp;Cerrar men&uacute;</a>';
                 echo '  </div>
                       </div>	';
             }

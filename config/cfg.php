@@ -8,7 +8,7 @@
 //$CFG_USER = array("sisepi","uepi");
 //$CFG_DBPWD = array("s1s3p1","123");
 //$CFG_DBASE = array("sisepi_db","db_epi");
-
+//31.170.161.43
 $CFG_HOST = array("127.0.0.1");
 $CFG_USER = array("u208944395_ingreso");
 $CFG_DBPWD = array("Ingreso2021");
