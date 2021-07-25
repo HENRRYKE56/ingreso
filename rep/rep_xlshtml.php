@@ -13,7 +13,7 @@ header("Cache-Control: ");
 //header ("Pragma: no-cache");
 header ("Content-type: application/vnd.ms-excel");
 //header ("Content-type: application/x-msexcel");
-header ("Content-Disposition: attachment; filename=glo_".$__SESSION->getValueSession('nomusuario').".xlsx" );
+header ("Content-Disposition: attachment; filename=glo_".$__SESSION->getValueSession('nomusuario').".xls" );
 //header ("Content-Description: PHP/INTERBASE Generated Data" );
 ?>
 <head>
