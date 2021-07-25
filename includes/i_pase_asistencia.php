@@ -142,7 +142,7 @@ function fnBeforeButtons($objectTmp) {
 
 
    
-        $a_pop_e3 = array('nombre'); //campo donde pinta icon =>para llamar modal
+        $a_pop_e3 = array('asistencia'); //campo donde pinta icon =>para llamar modal
         $a_popTitle_e3 = array('Asistencia'); //titulo del modal
         $a_popObVal_e3 = array('asistencia'); //return
         $a_popContent_e3 = array('lst_datos2'); //archivo php en raiz

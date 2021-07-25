@@ -137,15 +137,15 @@ if ($classval->NumReg > 0) {
     $a_align_fields = array('C', 'L', 'C', 'C', 'C', 'C');
     $a_width_fields = array('10', '23', '25', '25', '25', '25');
 
-    $boolPDF = false;
-    $pdfprint = 'reptcpdf.php';
+    $boolPDF = true;
+ 
 
     $tablas_qry = " registro_horas ";
   
   
    
 
-    $paso = false;
+    $paso = true;
     $str_groupby = " ORDER BY fecha asc ";
 
 
@@ -200,8 +200,9 @@ if ($classval->NumReg > 0) {
     $tabla_pintarxls = $TITULO . $tabla_pintarxls;
     $tabla_pintar2 = $tabla_pintar_tit;
     $tabla_pintar = $TITULO . $tabla_pintar_tit;
+    $tabla_pintar2 = $TITULO . $tabla_pintar_tit;
    //    echo $tabla_pintar;
-   
+   $pdfprint = 'reptcpdf.php';
 ################################################################################################################
 }
 
