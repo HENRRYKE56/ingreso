@@ -25,19 +25,30 @@ if ($classval->NumReg > 0) {
     $nombre = "";
     $nom_uni = "";
     //'fecha_visita','telefono'
-  
+   
     $fecha_ini = "";
     if (isset($_GET['fecha_ini'])) {
         $fecha_ini =  $_GET['fecha_ini'];
     }
-    $fecha_fin = "";
-    if (isset($_GET['fecha_fin'])) {
-        $fecha_fin =  $_GET['fecha_fin'];
+    $tit = "";
+    if (isset($_GET['tipo_reporte'])) {
+        $tipo_reporte =  $_GET['tipo_reporte'];
+       switch  ($tipo_reporte){
+           case 1:
+            $tit="Reporte de Asistencias por Sala del Examen de Admisión a la ENSVT";
+            break;
+            case 2:
+            $tit="Reporte de Insidencias del Examen de Admisión a la ENSVT";
+            break;
+       }
+       
+        
+       
     }
     
 
     $ar_label=['',' label_oscuro ',' label_claro '];
-    $TITULO = '<table width="100%" border="0" class="table-hover">' . '<tr><th colspan="4" style="text-align:center;"  class="'.$ar_label[$__SESSION->getValueSession('theme') * 1].'">KARDEX DE ASISTENCIA DEL '.$fecha_ini.' AL '.$fecha_fin.'</th></tr>';
+    $TITULO = '<table width="100%" border="0" class="table-hover">' . '<tr><th colspan="4" style="text-align:center;"  class="'.$ar_label[$__SESSION->getValueSession('theme') * 1].'"> '.$tit.'  </th></tr>';
     $TITULO .= '<tr><th colspan="4" style="text-align:center;" class="'.$ar_label[$__SESSION->getValueSession('theme') * 1].'"> ' . ( $__SESSION->getValueSession('desusuario')) . '</th></tr><tr><th colspan="4" style="text-align:center;" class="'.$ar_label[$__SESSION->getValueSession('theme') * 1].'"></th></tr></table>';
 
     $AGRUPACION = "\n";
@@ -114,20 +125,16 @@ if ($classval->NumReg > 0) {
     $agrupacion_sum = array();
     $agrupacion_des = array();
 
-    $a_getn_fields = array(
-          'fecha',
-          'rfc'
-        , 'hora_entrada'
-        , 'hora_salida');
+    $a_getn_fields = array('sala','des_usuario','asistencia','total');
     
     
 // // des_marca des_tipo_vehiculo   modelo   placas   num_serie
-    $str_Fields = " fecha,rfc,hora_entrada,hora_salida ";
-    $a_getl_fields = array('FECHA ','RFC','HORA ENTRADA','HORA SALIDA');
+    $str_Fields = "sala,des_usuario,asistencia,total";
+    $a_getl_fields = array('sala','Responsable de la Sala','asistencia','total');
 
 
     $a_getv_fields = array(' ', ' ', ' ', ' ', ' ', ' ');
-    $a_align_fields = array('C', 'C', 'C', 'C', 'C', 'C');
+    $a_align_fields = array('C', 'L', 'C', 'C', 'C', 'C');
     $a_width_fields = array('10', '23', '25', '25', '25', '25');
 
     $boolPDF = false;
@@ -173,7 +180,10 @@ if ($classval->NumReg > 0) {
     if (strlen(trim($str_pcWhere)) > 0)
         $str_pcWhere = " WHERE " . $str_pcWhere;
 
-    $str_Qry = "SELECT " . $str_Fields . " FROM " . $tablas_qry . $str_pcWhere . $str_groupby;
+    $str_Qry = "SELECT sala,b.des_usuario,COUNT(asistencia)asistencia,COUNT(a.nombre)total
+    FROM alumnos_ingreso a
+    INNER join sb_usuario b ON a.sala=b.cveuni
+    GROUP BY a.sala";
     
     $arreglo_preguntas = array();
     $arreglo_datos = array();

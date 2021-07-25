@@ -25,7 +25,7 @@ if ($str_check) {
     if ($classval->NumReg > 0) {
         /* ----------JURISDICCION--------------------- */
         $obligatorio = 0;
-        $entidad="<B> KARDEX DE ASISTENCIA</B>";
+        $entidad="<B> Reportes del Examen de Ingrso ENSVT</B>";
 
         $str_valmodulo = "MOD_VALIDO";
         $a_key = explode(',', $classval->key_modulo);
@@ -65,34 +65,13 @@ if ($str_check) {
         $a_separs = array();
       //  $a_separs[] = array(0, 'Criterios para generar reporte', 6, $CFG_BGC[10]);
         $field[] = array('idopc', 'idopc', '1', 'hidden', '1', '', 'int', 1, 200, 10, 2, '', 0, 1, 1, '');
-        $conf_date = "
-            changeMonth: true,
-            changeYear: true,
-            controlType: 'select',
-            oneLine: true,
-            dateFormat: 'dd/mm/yy',
-            timeFormat: '',
-            buttonText: '<i class=\'fa icon-calendar\'></i>',
-            dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
-            monthNamesShort: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-            showOn: 'button',
-            showClose: true,
-            closeText:'Cerrar',            
-            timeText:'',
-            " .
-//"            beforeShow: valid_fecha,".
-//"            onSelect: accion_select,"
-//            timeFormat: 'HH:mm',                 
-                "";
+     
 //         $conf_funciones="function valid_fecha() {
 //            }";
         $conf_funciones = "";
-        $field[] = array('fecha_ini', 'Fecha Inicial', '1', 'text', '1', '', 'date', date("d/m/Y"), 100, 10, 0, '', 1, array(1, 'col-12 col-sm-12','col-12 col-sm-6'), array(1, 1, 1), '', 0, 'Fecha de nacimiento', 0, '',
-            '', '', '', '', '', /* conf date jquery */ $conf_date, /* funcion */ $conf_funciones);        
-        $field[] = array('fecha_fin', 'Fecha Final', '1', 'text', '1', '', 'date', date("d/m/Y"), 100, 10, 0, '', 1, array(1, 'col-12 col-sm-12','col-12 col-sm-6'), array(1, 1, 1), '', 0, 'Fecha de nacimiento', 0, '',
-            '', '', '', '', '', /* conf date jquery */ $conf_date, /* funcion */ $conf_funciones);           
-        $a_check = array();
-        $a_check[] = array(1, array('idopc','fecha_ini','fecha_fin' ));        
+        $field[] = array('tipo_reporte', 'Tipo de Reporte', '1', 'select', '1', array(array(1,2),array('Asistencia','Incidencias')), 'char', '', 100, 10, 0, '', 1, array(1, 'col-12 col-sm-12','col-12 col-sm-6'));        
+         $a_check = array();
+        $a_check[] = array(1, array('idopc','tipo_reporte' ));        
 
         for ($x = 0; $x < 10; $x++) {
             $str_file_name = 'vparfile' . $x;
