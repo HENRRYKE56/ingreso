@@ -125,12 +125,12 @@ if ($classval->NumReg > 0) {
     $agrupacion_sum = array();
     $agrupacion_des = array();
 
-    $a_getn_fields = array('sala','des_usuario','asistencia','total');
+    $a_getn_fields = array('sala','des_usuario','asistencia','total','link_clase');
     
     
 // // des_marca des_tipo_vehiculo   modelo   placas   num_serie
-    $str_Fields = "sala,des_usuario,asistencia,total";
-    $a_getl_fields = array('sala','Responsable de la Sala','asistencia','total');
+    $str_Fields = "sala,des_usuario,asistencia,total,link_clase";
+    $a_getl_fields = array('sala','Responsable de la Sala','asistencia','total','Link');
 
 
     $a_getv_fields = array(' ', ' ', ' ', ' ', ' ', ' ');
@@ -141,26 +141,7 @@ if ($classval->NumReg > 0) {
     $pdfprint = 'reptcpdf.php';
 
     $tablas_qry = " registro_horas ";
-    switch ($__SESSION->getValueSession('cveperfil')){
-        case 1:
-            $str_pcWhere= " fecha BETWEEN  '".$_GET['fecha_ini']."' and '". $_GET['fecha_fin']."'";
-
-            break;
-        case 570:
-            $str_pcWhere= " fecha BETWEEN  '".$_GET['fecha_ini']."' and '". $_GET['fecha_fin']."'";
-
-   
-            break;	
-        case 569:
-            $str_pcWhere= " fecha BETWEEN  '".$_GET['fecha_ini']."' and '". $_GET['fecha_fin']."' and rfc='".$__SESSION->getValueSession('nomusuario')."'";
-
-            break;
-        case $__SESSION->getValueSession('cveperfil')>570:
-            $str_pcWhere= " fecha BETWEEN  '".$_GET['fecha_ini']."' and '". $_GET['fecha_fin']."' and rfc='".$__SESSION->getValueSession('nomusuario')."'";
-
-   
-            break;
-    }
+  
   
    
 
@@ -180,7 +161,7 @@ if ($classval->NumReg > 0) {
     if (strlen(trim($str_pcWhere)) > 0)
         $str_pcWhere = " WHERE " . $str_pcWhere;
 
-    $str_Qry = "SELECT sala,b.des_usuario,COUNT(asistencia)asistencia,COUNT(a.nombre)total
+    $str_Qry = "SELECT sala,b.des_usuario,COUNT(asistencia)asistencia,COUNT(a.nombre)total,link_clase
     FROM alumnos_ingreso a
     INNER join sb_usuario b ON a.sala=b.cveuni
     GROUP BY a.sala";
