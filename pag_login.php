@@ -95,9 +95,8 @@ for ($i = 0; $i < $classconsul->NumReg; $i++) {
         <header class="header encabezado-login">
             <div class="container-fluid">
                 <div>
-                    <img class="encabezado-escudo" src="images/escudo_edomex.svg" alt="Gobierno del Estado de México">
-                    <img class="encabezado-logo" src="images/logo_isem.svg" alt="Instituto de Salud del Estado de México">
-                    <h1><?php echo $nombre; ?></h1>
+                    <img class="encabezado-escudo" src="images/escudo_edomex.svg" alt="Gobierno del Estado de Mï¿½xico">
+                     <h1><?php echo $nombre; ?></h1>
                 </div>
             </div>
         </header>
@@ -212,11 +211,11 @@ for ($i = 0; $i < $classconsul->NumReg; $i++) {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <img class="pie-logo" src="images/logoedomex_plasta.svg" alt="Gobierno del Estado de México">
+                    <img class="pie-logo" src="images/logoedomex_plasta.svg" alt="Gobierno del Estado de Mï¿½xico">
                     <p style="font-weight: bold;" class="main-footer_c text-white">ISEM <?php echo date("Y"); ?></p>
                     <p>Departamento de Ingenieria de Software<br>
                         Correo: isem.desarrollosistemas@edomex.gob.mx<br>
-                        Teléfono: (722) 2 26 25 00 Ext: 64121, 64141</p>
+                        Telï¿½fono: (722) 2 26 25 00 Ext: 64121, 64141</p>
                 </div>
             </div>
         </div>

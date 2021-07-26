@@ -78,8 +78,7 @@ function fnEndSession($obj) {
             <div class="container-fluid">
                 <div>
                     <img class="encabezado-escudo" src="images/escudo_edomex.svg" alt="Gobierno del Estado de México">
-                    <img class="encabezado-logo" src="images/logo_isem.svg" alt="Instituto de Salud del Estado de México">
-                </div>
+                 </div>
             </div>
         </header>   
             <div class="bg-light">
