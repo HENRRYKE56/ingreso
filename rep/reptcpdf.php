@@ -101,7 +101,7 @@ $pdf->AddPage();
 $pdf->SetAbsXY(15, 40);
 $pdf->SetFont($gotham, '', 10);
 //echo $tabla_pintarxls;
-$html=utf8_encode($tabla_pintarxls);
+$html=($tabla_pintarxls);
 
 
 //$pdf->SetFont($gotham, '', 5);
