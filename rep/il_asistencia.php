@@ -190,14 +190,14 @@ global $reporte_hl;
         $tabla_pintarxls .= '<tr>';
         foreach ($a_getn_fields as $key => $value) {
             $tabla_pintar_tit .= '<th colspan="" style="text-align:center;">' . ($classent->$value) . '</th>';
-            $tabla_pintarxls .= '<th colspan="" style="text-align:center;">' . utf8_encode($classent->$value) . '</th>';
+            $tabla_pintarxls .= '<th colspan="" style="text-align:center;">' . ($classent->$value) . '</th>';
         }
         $tabla_pintar_tit .= '</tr>';
         $tabla_pintarxls .= '</tr>';
     }
     $tabla_pintar_tit .= '</table>';
     $tabla_pintarxls .= '</table>';
-    $tabla_pintarxls = $TITULO . $tabla_pintarxls;
+    $tabla_pintarxls = $TITULO . ($tabla_pintarxls);
     $tabla_pintar2 = $tabla_pintar_tit;
     $tabla_pintar = $TITULO . $tabla_pintar_tit;
     $tabla_pintar2 = $TITULO . $tabla_pintar_tit;

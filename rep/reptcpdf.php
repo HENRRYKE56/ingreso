@@ -19,9 +19,7 @@ class MYPDF extends TCPDF {
        
        // $this->SetFont('helvetica', '', 12);
         // Title
-        $this->SetAbsXY(12, 32);        
-        $this->Cell(271, 1, utf8_encode(''), "B", false, 'C', 0, '', 1, false, 'M', 'M');            
-        $this->SetAbsXY(0, 17);
+         $this->SetAbsXY(0, 17);
         $this->Cell(296, 10, utf8_encode('Escuela Normal Superior del Valle de Toluca'), 0, false, 'C', 0, '', 0, false, 'M', 'M');
         $this->SetAbsXY(0, 22);
         $this->Cell(296, 10, utf8_encode('Reporte de Examen de Ingreso 2021'), 0, false, 'C', 0, '', 1, false, 'M', 'M');
@@ -63,9 +61,9 @@ $pdf->SetProtection(array('print', 'copy'), '', null, 0, null);
 // set document information
 $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor('Ingenieria');
-$pdf->SetTitle('Actividades');
-$pdf->SetSubject('Actividades');
-$pdf->SetKeywords('Actividades');
+$pdf->SetTitle('Ingreso 2021');
+$pdf->SetSubject('ENSVT');
+$pdf->SetKeywords('ENSVT');
 
 
 // set default header data
@@ -103,7 +101,7 @@ $pdf->AddPage();
 $pdf->SetAbsXY(15, 40);
 $pdf->SetFont($gotham, '', 10);
 //echo $tabla_pintarxls;
-$html=$tabla_pintarxls;
+$html=utf8_encode($tabla_pintarxls);
 
 
 //$pdf->SetFont($gotham, '', 5);
