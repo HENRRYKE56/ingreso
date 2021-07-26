@@ -182,7 +182,7 @@ body{
 				winform.focus();
 			}
 </script> 
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>REPORTE</title>
 </head>
 <body>
@@ -380,27 +380,7 @@ $mireporte->setTitulos(array('',''));
 $mireporte->SetDefaultCellAttributes (array('style'=>'font-size:10px;'));
 $mireporte->setDatos($a_head);
 $mireporte->displayDatos(array(),array(),'no');
-/*foreach ($CFG_TABLA_FIELD as $ITEM_CFG_TABLA_FIELD){
-	
-	if (isset ($_SESSION['a_ses_criterios'][$_SESSION['GO']][$ITEM_CFG_TABLA_FIELD[1]])){
-		$classconsul = new Entidad($ITEM_CFG_TABLA_FIELD[3],array(''));
-		$strWhere="";
-		foreach ($ITEM_CFG_TABLA_FIELD[2] as $cnt_tmp => $VALUE_ITEM_CFG_TABLA_FIELD ){
-			if (strlen($strWhere)>0)
-				$strWhere.=" and ";
-				if ($ITEM_CFG_TABLA_FIELD[6][$cnt_tmp]=='num'){
-					$strWhere.=$VALUE_ITEM_CFG_TABLA_FIELD . "=" . trim($_SESSION['a_ses_criterios'][$_SESSION['GO']][$ITEM_CFG_TABLA_FIELD[1]]);}
-				else{
-					$strWhere.=$VALUE_ITEM_CFG_TABLA_FIELD . "='" . trim($_SESSION['a_ses_criterios'][$_SESSION['GO']][$ITEM_CFG_TABLA_FIELD[1]])."'";}
-		}
-		$strWhere="Where ".$strWhere;
-//		echo $strWhere;
-		$classconsul->ListaEntidades(array(),$ITEM_CFG_TABLA_FIELD[4],$strWhere,$ITEM_CFG_TABLA_FIELD[3][0],"no");
-		$classconsul->VerDatosEntidad(0,$ITEM_CFG_TABLA_FIELD[3]);
-		$a_head[]=array($ITEM_CFG_TABLA_FIELD[0],$classconsul->$ITEM_CFG_TABLA_FIELD[3][0]);
-	}
-}*/ //COMENTO INTERUMPE LA CREACION DE ENCABEZADOS DINAMICOS
-//$a_head0[]=array(strtoupper($CFG_TITLE));
+
 
 $mireporte= new Reporte(array('width'=>'100%','border'=>'0','cellpadding'=>'0','cellspacing'=>'1'));
 $mireporte->setTitulos(array(''));
@@ -415,22 +395,6 @@ $mireporte->displayDatos(array(),array('class'=>'arial16title'),'no');
 if (function_exists('fnPrintHeaders')){
     fnPrintHeaders();
 }
-//$mireporte->setDatos(array($a_colheaders));
-//$mireporte->SetCellAttributesR(1,1,array('class'=>'arial11px_white', 'width'=>((($a_width_fields[0]*5)-6).'px')));
-//$mireporte->SetCellAttributesR(1,2,array('class'=>'arial11px_azul', 'width'=>(($width_headersgroup[0]*5).'px')));
-////$mireporte->SetCellAttributesR(1,3,array('class'=>'arial11px_verde', 'width'=>(($width_headersgroup[1]*5).'px')));
-//$mireporte->SetCellAttributesR(1,3,array('class'=>'arial11px_verde', 'width'=>(($width_headersgroup[1]*5).'px')));
-//$mireporte->SetCellAttributesR(1,4,array('class'=>'arial11px_azul', 'width'=>(($width_headersgroup[2]*5).'px')));
-//$mireporte->SetCellAttributesR(1,5,array('class'=>'arial11px_verde', 'width'=>(($width_headersgroup[3]*5).'px')));
-//
-//$mireporte->displayDatos(array(),array('class'=>'arial11px_azul'),'no');
-
-
-//$mireporte = new Reporte(array('width' => '100%', 'border' => '1', 'cellpadding' => '0', 'cellspacing' => '1'));
-//$mireporte->SetDefaultCellAttributes(array('class' => 'arial11pxboldC', 'colspan' => sizeof($a_getl_fields)));    
-//$mireporte->SetCellAttributesR(sizeof($a_head0), 1, array('class' => 'arial11pxGrayC'));
-//$mireporte->setTitulos($a_getl_fields);
-//$mireporte->displayDatos(array('align' => 'center', 'bgcolor' => '#A6A6A6', 'class' => 'arial15enca'), array('bgcolor' => '#FFFFFF', 'class' => 'arial11pxnormal'));
 
 
 $mireporte= new Reporte(array('border'=>'0','align'=>'center','cellspacing'=>'2', 'bgcolor'=>'#E6E6E6', 'style'=>("width:".$wtabla.'px;')));//
@@ -438,27 +402,7 @@ $mireporte->setTitulos($a_getl_fields);
 $mireporte->setDatos($resultado);
 $cnt_xTemp=1;
 
-//DEBO DELCARAR UN ARRAY DE TIPO DE DATOS
 
-/*foreach ($tipo_datos_fields as $i_c => $element_rep){
-	if (!in_array($i_c,$no_print)){
-		switch($element_rep){
-			case 'num':
-				$mireporte->SetColAttributesR($cnt_xTemp,array('class'=>$CFG_STYLE_NUM));
-				$mireporte->SetCellAttributesR(1,$cnt_xTemp,array('class'=>'arial11pxbold', 'width'=>($element_rep[7].'px')));
-			break;
-			case 'date':
-				$mireporte->SetColAttributesR($cnt_xTemp,array('class'=>$CFG_STYLE_DATE));
-				$mireporte->SetCellAttributesR(1,$cnt_xTemp,array('class'=>'arial11pxbold', 'width'=>($element_rep[7].'px')));
-			break;
-			default:
-				$mireporte->SetColAttributesR($cnt_xTemp,array('class'=>$CFG_STYLE_DEF));
-				$mireporte->SetCellAttributesR(1,$cnt_xTemp,array('class'=>'arial11pxbold', 'width'=>($element_rep[7].'px')));
-			break;
-		}
-		$cnt_xTemp+=1;
-	}
-} */
 
 if ($_GET['fparam']=='il_tablero02' || $_GET['fparam']=='il_tablero05' || $_GET['fparam']=='il_tablero04' ){
 }else{

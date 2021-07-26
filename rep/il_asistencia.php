@@ -25,7 +25,7 @@ if ($classval->NumReg > 0) {
     $nombre = "";
     $nom_uni = "";
     //'fecha_visita','telefono'
-   
+    $pdfprint = 'reptcpdf.php';
     $fecha_ini = "";
     if (isset($_GET['fecha_ini'])) {
         $fecha_ini =  $_GET['fecha_ini'];
@@ -46,7 +46,7 @@ if ($classval->NumReg > 0) {
        
     }
     
-
+global $reporte_hl;
     $ar_label=['',' label_oscuro ',' label_claro '];
     $TITULO = '<table width="100%" border="0" class="table-hover">' . '<tr><th colspan="4" style="text-align:center;"  class="'.$ar_label[$__SESSION->getValueSession('theme') * 1].'"> '.$tit.'  </th></tr>';
     $TITULO .= '<tr><th colspan="4" style="text-align:center;" class="'.$ar_label[$__SESSION->getValueSession('theme') * 1].'"> ' . ( $__SESSION->getValueSession('desusuario')) . '</th></tr><tr><th colspan="4" style="text-align:center;" class="'.$ar_label[$__SESSION->getValueSession('theme') * 1].'"></th></tr></table>';
@@ -201,8 +201,9 @@ if ($classval->NumReg > 0) {
     $tabla_pintar2 = $tabla_pintar_tit;
     $tabla_pintar = $TITULO . $tabla_pintar_tit;
     $tabla_pintar2 = $TITULO . $tabla_pintar_tit;
+    $reporte_hl=$tabla_pintar2;
    //    echo $tabla_pintar;
-   $pdfprint = 'reptcpdf.php';
+
 ################################################################################################################
 }
 

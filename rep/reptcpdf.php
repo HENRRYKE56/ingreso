@@ -13,40 +13,29 @@ class MYPDF extends TCPDF {
         // Logo
         global $gotham;
         global $TITULO;
-        //die($gotham);
-        $this->setColorArray('text',array( 128 , 128 , 128 ));
-        $this->SetFont($gotham, '', 12, '', false);
+        global $tabla_pintarxls;
+      
+
+       
        // $this->SetFont('helvetica', '', 12);
         // Title
         $this->SetAbsXY(12, 32);        
         $this->Cell(271, 1, utf8_encode(''), "B", false, 'C', 0, '', 1, false, 'M', 'M');            
         $this->SetAbsXY(0, 17);
-      //  $this->Cell(296, 10, utf8_encode('Secretaría de Sssssalud'), 0, false, 'C', 0, '', 0, false, 'M', 'M');
-//        $this->SetAbsXY(0, 22);
-//        $this->Cell(296, 10, utf8_encode('INSTITUTO MEXIQUENSE CONTRA LAS ADICCIONES'), 0, false, 'C', 0, '', 1, false, 'M', 'M');
-        $this->SetFont($gotham, '', 8, '', false);
+        $this->Cell(296, 10, utf8_encode('Escuela Normal Superior del Valle de Toluca'), 0, false, 'C', 0, '', 0, false, 'M', 'M');
+        $this->SetAbsXY(0, 22);
+        $this->Cell(296, 10, utf8_encode('Reporte de Examen de Ingreso 2021'), 0, false, 'C', 0, '', 1, false, 'M', 'M');
         //$this->SetFont('times', '', 8);        
-        $this->SetAbsXY(12, 23);
-   //     $this->Cell(57, 12, utf8_encode('GOBIERNO DEL'), 0, false, 'C', 0, '', 0, false, 'M', 'M');
+        $this->SetAbsXY(115, 27);
+        $this->Cell(57, 12, date("d-m-Y "), 0, false, 'C', 0, '', 0, false, 'M', 'M');
         $this->SetAbsXY(12, 26);
-    //    $this->Cell(57, 12, utf8_encode('ESTADO DE MÉXICO'), 0, false, 'C', 0, '', 1, false, 'M', 'M');        
-        $this->SetAbsXY(12, 30);
-        $this->Image("../img/gob_es_mex.jpg", 12, 11, 30, '', 'JPG', '', 'T', false, 300, '', false, false, 0, false, false, false);
-        $this->SetAbsXY(12, 1);
-        $this->Image("../images/logofondo.jpg", 262, 10, 20, '', 'JPG', '', 'T', false, 600, '', false, false, 0, false, false, false);
-      //  $this->Image("../img/isem.jpg", 263, 25.5, 20, '', 'JPG', '', 'T', false, 300, '', false, false, 0, false, false, false);
-
+    //    $this->Cell(57, 12, utf8_encode('ESTADO DE Mï¿½XICO'), 0, false, 'C', 0, '', 1, false, 'M', 'M');        
+    
         $this->SetAbsXY(15, 11);
         $this->setColorArray('text',array( 0 , 0 , 0 ));
-        $this->SetFont($gotham, '', 10, '', false);
-$html=$TITULO;
-$imprime = <<<EOD
-        
-$html
-EOD;
 
-// print a block of text using Write()
-$this->writeHTML($html, false, false, false, false, "");            
+
+        
     }
 
     // Page footer
@@ -61,7 +50,6 @@ $this->writeHTML($html, false, false, false, false, "");
         }        
         $this->SetY(-15);
         // Set font
-        $this->SetFont($gotham, '', 8, '', false);
         //$this->SetFont('helvetica', 'I', 8);
         // Page number
         $this->Cell(0, 10, 'Pagina ' . $this->getAliasNumPage() . '/' . $this->getAliasNbPages(), 0, false, 'C', 0, '', 0, false, 'T', 'M');
@@ -79,8 +67,6 @@ $pdf->SetTitle('Actividades');
 $pdf->SetSubject('Actividades');
 $pdf->SetKeywords('Actividades');
 
-$gothamb = TCPDF_FONTS::addTTFfont('lib/font/makefont/Gotham-Bold.ttf', 'TrueTypeUnicode', '', 32);
-$gotham =  TCPDF_FONTS::addTTFfont('lib/font/makefont/gotham-book.ttf', 'TrueTypeUnicode', '', 32);
 
 // set default header data
 $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE, PDF_HEADER_STRING);
@@ -90,7 +76,7 @@ $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
 $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
 
 // set default monospaced font
-$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+
 
 // set margins
 $pdf->SetMargins(PDF_MARGIN_LEFT, 35, PDF_MARGIN_RIGHT);
@@ -116,13 +102,10 @@ $pdf->AddPage();
 // set some text to print
 $pdf->SetAbsXY(15, 40);
 $pdf->SetFont($gotham, '', 10);
+//echo $tabla_pintarxls;
+$html=$tabla_pintarxls;
 
-$html=$tabla_pintar2;
-//echo ''.$html;die();
-$imprime = <<<EOD
-        
-$html
-EOD;
+
 //$pdf->SetFont($gotham, '', 5);
 //$pdf->SetFont('times', '', 10);
 // print a block of text using Write()
