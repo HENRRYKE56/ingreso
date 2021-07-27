@@ -176,11 +176,11 @@ global $reporte_hl;
     $ar_tha = ['', 'table_hover_oscuro', 'table_hover_claro'];    
     $tabla_pintar_tit = '<table width="100%" border="1" class="table table-hover color_negro tabla_sys_en rounded"  style="">';
     
-    $tabla_pintar_tit .= '<tr><td colspan=3 style="text-align:center;" class="' . $ar_th[$__SESSION->getValueSession('theme') * 1] . '"> <b>RESPONSABLEGENERAL<b><br>
+    $tabla_pintar_tit .= '<tr><td colspan="3" style="text-align:center;" class="' . $ar_th[$__SESSION->getValueSession('theme') * 1] . '"> <b>RESPONSABLEGENERAL<b><br>
     RAMON TRUJILLO MARTINEZ  Cel. 7226063490<br>
     SONIA C. CONTRERAS CARACOZA Cel. 7223763655<br>
     GUILLERMO SARMIENTO MONTEAGUDO  Cel. 7226476122</td>
-    <td colspan=4 style="text-align:center;" class="' . $ar_th[$__SESSION->getValueSession('theme') * 1] . '"><b>COORDINADOR  DE AULAS VIRTUALES</b><br>
+    <td colspan="4" style="text-align:center;" class="' . $ar_th[$__SESSION->getValueSession('theme') * 1] . '"><b>COORDINADOR  DE AULAS VIRTUALES</b><br>
     HENRY LANDEROS MONDRAGON    <br>Cel. 7224647382
     </td><tr>
     <tr>';
