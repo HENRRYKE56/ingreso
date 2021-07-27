@@ -67,19 +67,21 @@ $strWhere="Where  sala=".$__SESSION->getValueSession('cveunidad');
 	$a_separs=array();
 	$a_separs[]=array(1,'datos generales',3,'separ_verde');
 		
-	$field[]=array('cve_alumno','No','1','text','char','',200,100,100,'','',array(1,'col-12 col-md-12','col-12 col-md-6'),5);
-	$field[]=array('curp','Curp','1','label','char','',200,100,100,'','',array(1,'col-12 col-md-12','col-12 col-md-6'),5);
-	 $field[]=array('folio','Folio','1','label','1','','char',"",200,200,0,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
+	$field[]=array('cve_alumno','No','1','hidden','2','','char','',1,0,100,'','',array(1,'col-12 col-md-12','col-12 col-md-6'),5);
+	$field[]=array('curp','Curp','1','label','1','','char','',20,30,100,'','',array(1,'col-12 col-md-12','col-12 col-md-6'),5);
+	 $field[]=array('folio','Folio','1','label','1','','char',"",400,100,200,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
 	 
 	 
-	 $field[]=array('nombre','Nombre','1','text','1','','char','',300,300,300,'','',array(1,'col-12 col-md-12','col-12 col-md-6'),5);
+	 $field[]=array('nombre','Nombre','1','text','1','','char','',70,70,70,'','',array(1,'col-12 col-md-12','col-12 col-md-6'),5);
+	 $field[]=array('correo','Email','1','text','1','','char','',20,20,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-3'),5);
+	  $field[]=array('ruta','ruta','1','hidden','1','','char','',70,20,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-3'),5);
+	  
+	  $field[]=array('sala','Sala','1','label','1','','char',"",30,20,0,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
+	  $field[]=array('asistencia','Asistencia','1','text','1','','char','',0,20,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
+	  $field[]=array('observaciones','Observaciones','1','text','1','','char','',200,20,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
+	  $field[]=array('link_clase','Link de la Clase','1','f_archivo1','1','','char','',200,20,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
 	  $field[]=array('plan_estudio','Plan_estudio','1','label','1','','char',"",350,200,0,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
-	  $field[]=array('sala','Sala','1','label','1','','char',"",350,200,0,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
-	  $field[]=array('asistencia','Asistencia','1','text','1','','char',0,400,20,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
-	  $field[]=array('observaciones','Observaciones','1','text','1','','char',0,400,20,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
-	  $field[]=array('link_clase','Link de la Clase','1','f_archivo1','1','','char',0,400,20,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
-	  $field[]=array('ruta','ruta','1','hidden','1','','char',0,400,20,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
-	 
+	  
 	 
 	  $keyFieldsPop = array('cve_alumno');
 
@@ -90,7 +92,7 @@ $strWhere="Where  sala=".$__SESSION->getValueSession('cveunidad');
 	$setdel='';
 	$keyFields=array('cve_alumno');
 	$keyTypeFields=array('num');	//int,text
-	$array_noprint_ent=array('ruta');
+	$array_noprint_ent=array('ruta','cve_alumno');
 	$rwitem='null';
 	$suma_width=0;
 	$strwentidad="entidad35.php";
