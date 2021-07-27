@@ -161,7 +161,7 @@ global $reporte_hl;
     if (strlen(trim($str_pcWhere)) > 0)
         $str_pcWhere = " WHERE " . $str_pcWhere;
 
-    $str_Qry = "SELECT sala,concat(des_usuario, '  Cel: ',email)des_usuario,COUNT(asistencia)asistencia,COUNT(a.nombre)total,link_clase
+    $str_Qry = "SELECT sala,concat(des_usuario, '  Cel: ',color_menu)des_usuario,COUNT(asistencia)asistencia,COUNT(a.nombre)total,link_clase
     FROM alumnos_ingreso a
     INNER join sb_usuario b ON a.sala=b.cveuni
     GROUP BY a.sala";
