@@ -125,12 +125,12 @@ global $reporte_hl;
     $agrupacion_sum = array();
     $agrupacion_des = array();
 
-    $a_getn_fields = array('sala','des_usuario','email','color_menu','asistencia','total','link_clase');
+    $a_getn_fields = array('sala','des_usuario','asistencia','total','link_clase');
     
     
 // // des_marca des_tipo_vehiculo   modelo   placas   num_serie
-    $str_Fields = "sala,des_usuario,email,color_menu,asistencia,total,link_clase";
-    $a_getl_fields = array('Sala','Responsable de la Sala','Teléfono','Correo','Asistencia','Total','Link');
+    $str_Fields = "sala,des_usuario,asistencia,total,link_clase";
+    $a_getl_fields = array('Sala','Responsable de la Sala','Asistencia','Total','Link');
 
 
     $a_getv_fields = array(' ', ' ', ' ', ' ', ' ', ' ');
@@ -161,7 +161,7 @@ global $reporte_hl;
     if (strlen(trim($str_pcWhere)) > 0)
         $str_pcWhere = " WHERE " . $str_pcWhere;
 
-    $str_Qry = "SELECT sala,des_usuario,email,color_menu,COUNT(asistencia)asistencia,COUNT(a.nombre)total,link_clase
+    $str_Qry = "SELECT sala,concat(des_usuario, '  Cel: ',email)des_usuario,COUNT(asistencia)asistencia,COUNT(a.nombre)total,link_clase
     FROM alumnos_ingreso a
     INNER join sb_usuario b ON a.sala=b.cveuni
     GROUP BY a.sala";
@@ -175,15 +175,7 @@ global $reporte_hl;
     $ar_th = ['', 'oscuro_1', 'claro_1'];
     $ar_tha = ['', 'table_hover_oscuro', 'table_hover_claro'];    
     $tabla_pintar_tit = '<table width="100%" border="1" class="table table-hover color_negro tabla_sys_en rounded"  style="">';
-    
-    $tabla_pintar_tit .= '<tr><td colspan="3" style="text-align:center;" class="' . $ar_th[$__SESSION->getValueSession('theme') * 1] . '"> <b>RESPONSABLEGENERAL<b><br>
-    RAMON TRUJILLO MARTINEZ  Cel. 7226063490<br>
-    SONIA C. CONTRERAS CARACOZA Cel. 7223763655<br>
-    GUILLERMO SARMIENTO MONTEAGUDO  Cel. 7226476122</td>
-    <td colspan="4" style="text-align:center;" class="' . $ar_th[$__SESSION->getValueSession('theme') * 1] . '"><b>COORDINADOR  DE AULAS VIRTUALES</b><br>
-    HENRY LANDEROS MONDRAGON    <br>Cel. 7224647382
-    </td><tr>
-    <tr>';
+    $tabla_pintar_tit .= '<tr>';
     for ($index2 = 0; $index2 < count($a_getl_fields); $index2++) {
         $tabla_pintar_tit .= '<th style="text-align:center;" class="' . $ar_th[$__SESSION->getValueSession('theme') * 1] . '">' . $a_getl_fields[$index2] . '</th>';
     }
