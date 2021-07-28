@@ -269,7 +269,7 @@ if ($__SESSION->getValueSession('nomusuario') == "") {
             $barra_busqueda.=genInput('hidden', array('op','op_00'), '1');
             $barra_busqueda.=genInput('hidden', array('nivPo','nivPo_00'), (strlen($__SESSION->getValueSession('niv')) > 0) ? $__SESSION->getValueSession('niv') : '0');
             $barra_busqueda.=genInput('hidden', 'btnAdd', 'btnAdd');
-            $barra_busqueda.= '<button type="submit" class="btn punteados b_s_sys text-white"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Nuevo</span></button>';
+            $barra_busqueda.= '<button type="submit" class="btn boton_act punteados b_s_sys"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Nuevo</span></button>';
             $barra_busqueda.="</fieldset></form>";
         }
         $barra_busqueda.='  </div>';
