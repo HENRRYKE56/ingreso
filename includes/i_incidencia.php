@@ -78,12 +78,12 @@ if ($str_check) {
 		$field[]=array('des_incidencia','Incidencia','1','textarea','1','','char','',100,200,0,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
 		
 		if (($__SESSION->getValueSession('opc') == 2 ) || isset($_POST['btnGuarda'])) {
-            $field[]=array('file_name','Archivo 1089x451','1','file','1','','char',null,200,83,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-6'),5,'',0,'Archivo');  
+            $field[]=array('file_name','Archivo 1089x451','1','file','1','','char',null,200,83,2,'',"",array(1,'col-12 col-md-12','col-12 col-md-6'),5,'',0,'Archivo');  
         }else{
             if (($__SESSION->getValueSession('opc') == 3 ) || isset($_POST['btnActualiza'])) {
-                $field[]=array('file_name','Archivo','1','text','2','','char',null,200,83,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-6'),5,'',0,'Archivo'); 
+                $field[]=array('file_name','Archivo','1','text','2','','char',null,200,83,2,'',"",array(1,'col-12 col-md-12','col-12 col-md-6'),5,'',0,'Archivo'); 
             }else{
-                $field[]=array('file_name','Archivo','1','f_archivo','1','','char',null,200,83,2,'',1,array(1,'col-12 col-md-12','col-12 col-md-6'),5,'',0,'Archivo'); 
+                $field[]=array('file_name','Archivo','1','f_archivo','1','','char',null,200,83,2,'',"",array(1,'col-12 col-md-12','col-12 col-md-6'),5,'',0,'Archivo'); 
             }
         }
         
