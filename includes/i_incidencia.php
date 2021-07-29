@@ -126,8 +126,11 @@ if ($str_check) {
 	include_once("sb_refresh.php");
 }
 function fnValidBeforeAdd(){
-    global $msg;
-    
+
+	if ($_FILES['file_name']["error"] > 4){
+		unset($_FILES);
+	}
+
     if(isset($_FILES['file_name'])){
 
     $tipo_ar=$_FILES['file_name']["type"];
