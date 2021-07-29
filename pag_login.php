@@ -214,8 +214,7 @@ for ($i = 0; $i < $classconsul->NumReg; $i++) {
                     <img class="pie-logo" src="images/logoedomex_plasta.svg" alt="Gobierno del Estado de M�xico">
                     <p style="font-weight: bold;" class="main-footer_c text-white">ISEM <?php echo date("Y"); ?></p>
                     <p>Departamento de Ingenieria de Software<br>
-                        Correo: isem.desarrollosistemas@edomex.gob.mx<br>
-                        Tel�fono: (722) 2 26 25 00 Ext: 64121, 64141</p>
+                        </p>
                 </div>
             </div>
         </div>

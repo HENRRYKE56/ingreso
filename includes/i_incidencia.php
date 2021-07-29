@@ -39,7 +39,7 @@ if ($str_check) {
 		'3 - tipo de objeto','4 - modificable(0: no mofificable, 1:modificable, 2: mofificable solo para nuevo registro)',
 		'5 - valores alternos','6 - tipo de dato','7 - Valor inicial','8 - width de columna en brow', '9 - width de columna en view'
 		'10 - longitud maxima en caja de texto', '11 - cadena de validaci&oacute;n', 12 - requiered);*/
-		$entidad='Insidencias del Examen de Ingreso ENSVT';
+		$entidad='Incidencias del Examen de Ingreso ENSVT';
 		$id_prin='cve_incidencia ';
 			$strWhere="";
 		

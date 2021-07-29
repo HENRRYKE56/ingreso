@@ -531,9 +531,6 @@ if ($str_check) {
                     <div class="container-fluid">
                         <div class="navbar-holder d-flex align-items-center justify-content-between" style="color:#3CB371;">
 
-                            <a href="#" class="" >
-                                <img class="user-avatar rounded" style="width:300px;" src="images/edoisem.png" alt="Usuario">
-                            </a>
 
 
                         </div>
