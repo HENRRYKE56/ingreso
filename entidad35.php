@@ -258,6 +258,7 @@ if ($__SESSION->getValueSession('nomusuario') == "") {
   
    // echo '<h2>'.$entidad.'</h2>';
     /* inicia formulario de busqueda */
+    //hlm
 
     $barra_busqueda_only = '';
     if (isset($a_search)) {
