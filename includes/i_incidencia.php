@@ -127,7 +127,7 @@ if ($str_check) {
 }
 function fnValidBeforeAdd(){
 
-	if ($_FILES['file_name']["error"] > 4){
+	if ($_FILES['file_name']["error"] >0){
 		unset($_FILES);
 	}
 
