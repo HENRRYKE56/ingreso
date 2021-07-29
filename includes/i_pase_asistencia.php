@@ -92,7 +92,7 @@ $strWhere="Where  sala=".$__SESSION->getValueSession('cveunidad');
 	$setdel='';
 	$keyFields=array('cve_alumno');
 	$keyTypeFields=array('num');	//int,text
-	$array_noprint_ent=array('ruta','cve_alumno');
+	$array_noprint_ent=array('ruta','cve_alumno','link_clase','correo','plan_estudio');
 	$rwitem='null';
 	$suma_width=0;
 	$strwentidad="entidad35.php";

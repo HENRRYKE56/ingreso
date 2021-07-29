@@ -20,8 +20,8 @@
 			$tablas_c='alumnos_ingreso ';
 			$a_order[]=$id_prin;
 
-
-
+			$hora=date('h:i:s', time());
+			
 	$tabla='alumnos_ingreso ';
 	$a_separs=array();
 	$a_separs[]=array(1,'Pase de Lista',4,"separ_verde");
@@ -31,6 +31,7 @@
 	$field[]=array('nombre','Nombre','1','label','1','','char','',120,20,2,'','',array(1,'col-12 col-sm-12','col-12 col-sm-6'),2,'','clase');	
     $field[]=array('asistencia','Asistencia','1','check','1','','char',"",200,100,array(1,5),'',1,array(1,'col-12 col-md-12','col-12 col-md-3'),array(1,1,6));	
 	$field[]=array('observaciones','Observaciones','1','text','1','','char',"",200,100,array(5,50),'','',array(1,'col-12 col-md-12','col-12 col-md-12'),array(1,1,6));	
+	$field[]=array('hora_entrada','Hora Entrada','1','label','1','','char',$hora,200,100,array(5,50),'','',array(1,'col-12 col-md-12','col-12 col-md-12'),array(1,1,6));	
 	
 	$setdel='';
 	$keyFields=array('cve_alumno');

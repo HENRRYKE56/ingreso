@@ -111,9 +111,11 @@ if (isset($_POST['btnGuardaLight'])) {
 	//}
 }
 if (isset($_POST['btnActualizaLight'])) {
-//		echo "<pre>";
-//		print_r($_POST);
-//		echo "</pre>";   die();
+	$hora=date('h:i:s', time());
+	$_POST['hora_entrada']=$hora;
+		/*echo "<pre>";
+		print_r($_POST);
+		echo "</pre>";   die();*/
 	//if($findSubmit==1){
 	   //Logica para actualizar la informacion de un registro
 	   //if (trim($a_key[1])=='100'){
