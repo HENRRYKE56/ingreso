@@ -95,7 +95,7 @@ for ($i=0; $i<$classconsul->NumReg; $i++) {
         }
         
         $field[]=array('ruta','Ruta','1','hidden','2','','char',"",200,100,90,'','',array(1,'col-12 col-md-12','col-12 col-md-6'),array(1,1,6));       
-      
+      ///ok
 	   $a_print = array();
 		$a_identifyRow=array('cve_incidencia');
         $array_noprint_ent=array('ruta');
