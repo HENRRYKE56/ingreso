@@ -52,7 +52,16 @@ if ($str_check) {
 			
 
 /******inicia condicion de busqueda*/
-		
+$per_val=array();
+$per_des=array();
+$strPcWhere=" ";
+$classconsul = new Entidad(array('nom_usuario','des_usuario'),array(0,''));
+$classconsul->ListaEntidades(array('nom_usuario'),'sb_usuario p',$strPcWhere," p.nom_usuario, p.des_usuario ");
+for ($i=0; $i<$classconsul->NumReg; $i++) {
+	$classconsul->VerDatosEntidad($i,array('nom_usuario','des_usuario'));
+	$per_val[]=$classconsul->nom_usuario;
+	$per_des[]=$classconsul->des_usuario;
+}
   
                                    
 			/******termina condicion de busqueda*/
@@ -67,9 +76,12 @@ if ($str_check) {
 		$a_separs[]=array(1,'Datos Generales',12,'separ_verde');
        
         $field[]=array('cve_incidencia','No de incidencia','1','hidden','1','','char',"",100,200,0,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
-        
-		$field[]=array('cveusuario','Usuario','1','hidden','1','','char',$__SESSION->getValueSession('nomusuario'),100,200,0,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
-        
+        if ($__SESSION->getValueSession('opc') == 0 ){
+			$field[]=array('cveusuario','Quien Reporta ','1','select','2',array($per_val,$per_des),'int',0,700,20,2,'',1,1,5);
+	
+		}else{
+			$field[]=array('cveusuario','Usuario','1','hidden','1','','char',$__SESSION->getValueSession('nomusuario'),100,200,0,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
+		}
 		$field[]=array('des_incidencia','Incidencia','1','textarea','1','','char','',100,200,0,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
 		
 		if (($__SESSION->getValueSession('opc') == 2 ) || isset($_POST['btnGuarda'])) {
