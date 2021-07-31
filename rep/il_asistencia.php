@@ -27,9 +27,7 @@ if ($classval->NumReg > 0) {
     //'fecha_visita','telefono'
     $pdfprint = 'reptcpdf.php';
     $fecha_ini = "";
-    if (isset($_GET['fecha_ini'])) {
-        $fecha_ini =  $_GET['fecha_ini'];
-    }
+  
     $tit = "";
     if (isset($_GET['tipo_reporte'])) {
         $tipo_reporte =  $_GET['tipo_reporte'];
@@ -99,28 +97,28 @@ global $reporte_hl;
                 INNER join sb_usuario b ON a.sala=b.cveuni
                 GROUP BY a.sala";
 
-$t_asistencia=0;
-$t_registro=0;
-$classconsul = new Entidad(array('asistencia','total'),array(0,''));
-$classconsul->ListaEntidades(array('asistencia'),' alumnos_ingreso a','  GROUP BY a.sede'," sum(asistencia)asistencia,COUNT(a.nombre)total ");
-if ( $classconsul->NumReg>0) {
-    $classconsul->VerDatosEntidad(0,array('asistencia','total'));
-    $t_asistencia=$classconsul->asistencia;
-    $t_registro=$classconsul->total;
-}
+                $t_asistencia=0;
+                $t_registro=0;
+                $classconsul = new Entidad(array('asistencia','total'),array(0,''));
+                $classconsul->ListaEntidades(array('asistencia'),' alumnos_ingreso a','  GROUP BY a.sede'," sum(asistencia)asistencia,COUNT(a.nombre)total ");
+                if ( $classconsul->NumReg>0) {
+                    $classconsul->VerDatosEntidad(0,array('asistencia','total'));
+                    $t_asistencia=$classconsul->asistencia;
+                    $t_registro=$classconsul->total;
+                }
 
 
-      }
+     }
       else{
                  $a_getn_fields = array('cve_incidencia','des_incidencia','des_usuario');
                 $str_Fields = "cve_incidencia,des_incidencia,des_usuario";
                 $a_getl_fields = array('No','Incidencia','Usuario');
-                $a_getv_fields = array(' ', ' ', ' ', ' ', ' ', ' ');
+                $a_getv_fields = array(' ', ' ', ' ');
                 $a_align_fields = array('C', 'L', 'C');
                 $a_width_fields = array('5', '70','25');
 
                 $str_Qry = "SELECT a.cve_incidencia,a.des_incidencia,b.des_usuario
-                FROM incidencias a INNER JOIN sb_usuario b ON a.cveusuario=b.nom_usuario order by cve_incidencia desc";
+                FROM incidencias a left JOIN sb_usuario b ON a.cveusuario=b.nom_usuario order by cve_incidencia desc";
           
        }
        
