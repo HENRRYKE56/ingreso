@@ -126,7 +126,7 @@ $pdf->SetFont($gotham, 'B', 14);
 
 //generar tabla principal
 // set some text to print
-$pdf->SetAbsXY(15, 60);
+$pdf->SetAbsXY(15, 55);
 $pdf->SetFont($gotham, '', 10);
 //echo $tabla_pintarxls;
 $html=($tabla_pintarxls);

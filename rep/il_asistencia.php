@@ -117,7 +117,7 @@ if ( $classconsul->NumReg>0) {
                 $a_getl_fields = array('No','Incidencia','Usuario');
                 $a_getv_fields = array(' ', ' ', ' ', ' ', ' ', ' ');
                 $a_align_fields = array('C', 'L', 'C');
-                $a_width_fields = array('10', '60','30');
+                $a_width_fields = array('5', '70','25');
 
                 $str_Qry = "SELECT a.cve_incidencia,a.des_incidencia,b.des_usuario
                 FROM incidencias a INNER JOIN sb_usuario b ON a.cveusuario=b.nom_usuario order by cve_incidencia desc";
