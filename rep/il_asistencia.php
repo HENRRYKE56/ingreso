@@ -102,7 +102,7 @@ global $reporte_hl;
 $t_asistencia=0;
 $t_registro=0;
 $classconsul = new Entidad(array('asistencia','total'),array(0,''));
-$classconsul->ListaEntidades(array('asistencia'),' alumnos_ingreso a','  GROUP BY a.sede'," COUNT(asistencia)asistencia,COUNT(a.nombre)total ");
+$classconsul->ListaEntidades(array('asistencia'),' alumnos_ingreso a','  GROUP BY a.sede'," sum(asistencia)asistencia,COUNT(a.nombre)total ");
 if ( $classconsul->NumReg>0) {
     $classconsul->VerDatosEntidad(0,array('asistencia','total'));
     $t_asistencia=$classconsul->asistencia;
