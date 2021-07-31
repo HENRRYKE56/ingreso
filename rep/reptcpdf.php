@@ -111,15 +111,17 @@ if (@file_exists(dirname(__FILE__) . '/lang/eng.php')) {
 // set font
 // add a page
 $pdf->AddPage();
-
-$this->SetAbsXY(15, 45);
-        $this->Cell(57, 160, " RAMON TRUJILLO MARTINEZ  Cel. 7226069490", 0, false, 'L', 0, '', 0, false, 'M', 'M');
-        $this->SetAbsXY(15, 50);
-        $this->Cell(57, 160, "SONIA C. CONTRERAS CARACOZA Cel. 7223763655", 0, false, 'L', 0, '', 0, false, 'M', 'M');
-        $this->SetAbsXY(15, 55);
-        $this->Cell(57, 120, "GUILLERMO SARMIENTO MONTEAGUDO  Cel. 7226476122", 0, false, 'L', 0, '', 0, false, 'M', 'M');
-        $this->SetAbsXY(15, 60);
-        $this->Cell(57, 120, "HENRY LANDEROS MONDRAGON Cel. 7224647382", 0, false, 'L', 0, '', 0, false, 'M', 'M');
+$pdf->SetFont($gotham, 'B', 14);
+        $pdf->SetAbsXY(15, 40);
+        $pdf->Cell(0, 0, "Responsables", 0, false, 'L', 0, '', 0, false, 'M', 'M');
+        $pdf->SetAbsXY(15, 45);
+        $pdf->Cell(0, 0, "RAMON TRUJILLO MARTINEZ  Cel. 7226069490", 0, false, 'L', 0, '', 0, false, 'M', 'M');
+        $pdf->SetAbsXY(15, 50);
+        $pdf->Cell(0, 0, "SONIA C. CONTRERAS CARACOZA Cel. 7223763655", 0, false, 'L', 0, '', 0, false, 'M', 'M');
+        $pdf->SetAbsXY(15, 55);
+        $pdf->Cell(0, 0, "GUILLERMO SARMIENTO MONTEAGUDO  Cel. 7226476122", 0, false, 'L', 0, '', 0, false, 'M', 'M');
+        $pdf->SetAbsXY(15, 60);
+        $pdf->Cell(0, 0, "HENRY LANDEROS MONDRAGON Cel. 7224647382", 0, false, 'L', 0, '', 0, false, 'M', 'M');
         
 
 //generar tabla principal
