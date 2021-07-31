@@ -15,24 +15,44 @@ class MYPDF extends TCPDF {
         global $TITULO;
         global $tabla_pintarxls;
       
-
+if($_GET['tipo_reporte']==1){
+    $ttitu="Reporte de Asistencias del Examen de Ingreso 2021 a la ENSVT";
+}else{
+    $ttitu="Reporte de Incidencias del Examen de Ingreso 2021 a la ENSVT";
+}
        
        // $this->SetFont('helvetica', '', 12);
         // Title
-         $this->SetAbsXY(0, 17);
-        $this->Cell(296, 10, utf8_encode('Escuela Normal Superior del Valle de Toluca'), 0, false, 'C', 0, '', 0, false, 'M', 'M');
-        $this->SetAbsXY(0, 22);
-        $this->Cell(296, 10, utf8_encode('Reporte de Examen de Ingreso 2021'), 0, false, 'C', 0, '', 1, false, 'M', 'M');
+        $image_file = K_PATH_IMAGES.'imagenes/logo.jpg';
+        /*echo"<pre>";
+        print_r( $_GET['tipo_reporte']);
+        die();*/
+        $this->Image($image_file, 5, 2, 285, '', 'JPG', '', 'T', false, 300, '', false, false, 0, false, false, false);
+      
+        $this->SetFont('helvetica', 'B', 12);
+          $this->SetAbsXY(0, 22);
+        $this->Cell(280, 10, $ttitu, 0, false, 'C', 0, '', 1, false, 'M', 'M');
         //$this->SetFont('times', '', 8);        
-        $this->SetAbsXY(115, 27);
-        $this->Cell(57, 12, date("d-m-Y "), 0, false, 'C', 0, '', 0, false, 'M', 'M');
-        $this->SetAbsXY(12, 26);
-    //    $this->Cell(57, 12, utf8_encode('ESTADO DE M�XICO'), 0, false, 'C', 0, '', 1, false, 'M', 'M');        
-    
-        $this->SetAbsXY(15, 11);
-        $this->setColorArray('text',array( 0 , 0 , 0 ));
+        $this->SetAbsXY(110, 27);
+        $this->Cell(57, 12, "Generado en ensvt.com/ingreso", 0, false, 'C', 0, '', 0, false, 'M', 'M');
+        $this->SetAbsXY(110, 32);
+       
+        $this->Cell(57, 12, date("d-m-Y H:i:s"), 0, false, 'C', 0, '', 0, false, 'M', 'M');
+        $this->SetAbsXY(15, 40);
+ $this->Cell(57, 120, "RESPONSABLE GENERAL", 0, false, 'L', 0, '', 0, false, 'M', 'M');
+ $this->SetAbsXY(15, 45);
+ $this->Cell(57, 160, " RAMON TRUJILLO MARTINEZ  Cel. 7226069490", 0, false, 'L', 0, '', 0, false, 'M', 'M');
+ $this->SetAbsXY(15, 50);
+ $this->Cell(57, 160, "SONIA C. CONTRERAS CARACOZA Cel. 7223763655", 0, false, 'L', 0, '', 0, false, 'M', 'M');
+ $this->SetAbsXY(15, 55);
+ $this->Cell(57, 120, "GUILLERMO SARMIENTO MONTEAGUDO  Cel. 7226476122", 0, false, 'L', 0, '', 0, false, 'M', 'M');
+ $this->SetAbsXY(15, 60);
+ $this->Cell(57, 120, "HENRY LANDEROS MONDRAGON Cel. 7224647382", 0, false, 'L', 0, '', 0, false, 'M', 'M');
 
 
+
+     
+       
         
     }
 
@@ -45,7 +65,14 @@ class MYPDF extends TCPDF {
         if($ultimahoja<>true){
         $this->SetAbsXY(15, 187);        //barra separador
         $this->Cell(267, 1, utf8_encode(''),array('T' => array('width' => .3, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0))) , false, 'C', 0, '', 1, false, 'M', 'M');
-        }        
+        }   
+        
+        $image_file = K_PATH_IMAGES.'imagenes/abajo.jpg';
+        /*echo"<pre>";
+        print_r( $_GET['tipo_reporte']);
+        die();*/
+        $this->Image($image_file, 5, 190, 285, '', 'JPG', '', 'T', false, 300, '', false, false, 0, false, false, false);
+     
         $this->SetY(-15);
         // Set font
         //$this->SetFont('helvetica', 'I', 8);
@@ -98,7 +125,7 @@ $pdf->AddPage();
 
 //generar tabla principal
 // set some text to print
-$pdf->SetAbsXY(15, 40);
+$pdf->SetAbsXY(15, 60);
 $pdf->SetFont($gotham, '', 10);
 //echo $tabla_pintarxls;
 $html=($tabla_pintarxls);

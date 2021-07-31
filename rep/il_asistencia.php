@@ -99,6 +99,17 @@ global $reporte_hl;
                 INNER join sb_usuario b ON a.sala=b.cveuni
                 GROUP BY a.sala";
 
+$t_asistencia=0;
+$t_registro=0;
+$classconsul = new Entidad(array('asistencia','total'),array(0,''));
+$classconsul->ListaEntidades(array('asistencia'),' alumnos_ingreso a','  GROUP BY a.sede'," COUNT(asistencia)asistencia,COUNT(a.nombre)total ");
+if ( $classconsul->NumReg>0) {
+    $classconsul->VerDatosEntidad(0,array('asistencia','total'));
+    $t_asistencia=$classconsul->asistencia;
+    $t_registro=$classconsul->total;
+}
+
+
       }
       else{
                  $a_getn_fields = array('cve_incidencia','des_incidencia','des_usuario');
@@ -159,6 +170,21 @@ global $reporte_hl;
         }
         $tabla_pintar_tit .= '</tr>';
         $tabla_pintarxls .= '</tr>';
+    }
+    if($tipo_reporte==1){
+      
+    $tabla_pintar_tit .= '<tr>
+                                <td colspan="2" style="text-align: right;"><b >Total</b></td>
+                                <td><b>'.$t_asistencia.'</b></td>
+                                <td><b>'.$t_registro.'</b></td>
+                                <td></td>
+                        </tr>';
+    $tabla_pintarxls .= '<tr>
+                            <td colspan="2" style="text-align: right;"><b >Total</b></td>
+                            <td><b>'.$t_asistencia.'</b></td>
+                            <td><b>'.$t_registro.'</b></td>
+                            <td></td>
+                        </tr>';
     }
     $tabla_pintar_tit .= '</table>';
     $tabla_pintarxls .= '</table>';
