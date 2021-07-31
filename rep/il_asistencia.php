@@ -188,7 +188,7 @@ if ( $classconsul->NumReg>0) {
     }
     $tabla_pintar_tit .= '</table>';
     $tabla_pintarxls .= '</table>';
-    $tabla_pintarxls = $TITULO .utf8_encode($tabla_pintarxls);
+    $tabla_pintarxls = $TITULO .($tabla_pintarxls);
     $tabla_pintar2 = $tabla_pintar_tit;
     $tabla_pintar = $TITULO . $tabla_pintar_tit;
     $tabla_pintar2 = ($TITULO . $tabla_pintar_tit);
