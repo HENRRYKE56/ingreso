@@ -82,102 +82,66 @@ global $reporte_hl;
 
     $p_orientacion = 'L';
     $p_tamano = 'letter';
-    $_GET['fecha_ini'] = implode('-', array_reverse(explode('/', $_GET['fecha_ini'])));
-    $_GET['fecha_fin'] = implode('-', array_reverse(explode('/', $_GET['fecha_fin'])));
-   
-    $a_qry = array();
-    $a_qry[] = array("fecha_ini", 'fecha_visita', 'date', 'text', '=', 'datos_sei', '', '', '', '', '', '');
-    $a_qry[] = array("fecha_fin", 'telefono', 'date', 'text', '=', 'datos_sei', '', '', '', '', '', '');
-
-
-    if (sizeof($a_qry) > 0) {/* crea cadena de qry */
-        foreach ($a_qry as $element_aqry) {
-            if (isset($_GET[$element_aqry[1]])) {
-
-                if (strlen(trim($str_pcWhere)) > 0)
-                    if (isset($element_aqry[11]) and $element_aqry[11] == 1)
-                        $str_pcWhere .= " or ";
-                    else
-                        $str_pcWhere .= " and ";
-                if ($element_aqry[2] == 'num') {
-                    $str_pcWhere .= $element_aqry[7] . $element_aqry[$NTU] . (isset($element_aqry[$NTU]) && $element_aqry[$NTU] <> '' ? '.' : '') . $element_aqry[0] . $element_aqry[8] . " " . $element_aqry[4] . " " . $element_aqry[9] . ($_GET[$element_aqry[1]] * 1) . $element_aqry[9];
-                } else {
-                    $str_pcWhere .= $element_aqry[7] . $element_aqry[$NTU] . (isset($element_aqry[$NTU]) && $element_aqry[$NTU] <> '' ? '.' : '') . $element_aqry[0] . $element_aqry[8] . " " . $element_aqry[4] . " "
-                            . (strlen(trim($element_aqry[9])) == 0 ? "'" : $element_aqry[9]) . $_GET[$element_aqry[1]] . (strlen(trim($element_aqry[10])) == 0 ? "'" : $element_aqry[10]);
-                }
-            }
-        }
-    }
 
     /*     * ***********FINALIZA SECCION********** */
+    if (isset($_GET['tipo_reporte'])) {
+        $tipo_reporte =  $_GET['tipo_reporte'];
+      if($tipo_reporte==1){
+               $a_getn_fields = array('sala','des_usuario','asistencia','total','link_clase');
+                $str_Fields = "sala,des_usuario,asistencia,total,link_clase";
+                $a_getl_fields = array('Sala','Responsable de la Sala','Asistencia','Total','Link');
+                $a_getv_fields = array(' ', ' ', ' ', ' ', ' ', ' ');
+                $a_align_fields = array('C', 'L', 'C', 'C', 'C', 'C');
+                $a_width_fields = array('10', '40', '15', '10', '25');
 
+                $str_Qry = "SELECT sala,concat(des_usuario, '  Cel: ',color_menu)des_usuario,COUNT(asistencia)asistencia,COUNT(a.nombre)total,link_clase
+                FROM alumnos_ingreso a
+                INNER join sb_usuario b ON a.sala=b.cveuni
+                GROUP BY a.sala";
 
-    $tab_asoc = array();
-    $arr_bg_color = array();
+      }
+      else{
+                 $a_getn_fields = array('cve_incidencia','des_incidencia','des_usuario');
+                $str_Fields = "cve_incidencia,des_incidencia,des_usuario";
+                $a_getl_fields = array('No','Incidencia','Usuario');
+                $a_getv_fields = array(' ', ' ', ' ', ' ', ' ', ' ');
+                $a_align_fields = array('C', 'L', 'C');
+                $a_width_fields = array('10', '60','30');
 
+                $str_Qry = "SELECT a.cve_incidencia,a.des_incidencia,b.des_usuario
+                FROM incidencias a INNER JOIN sb_usuario b ON a.cveusuario=b.nom_usuario order by cve_incidencia desc";
+          
+       }
+       
+        
+       
+    }
 
-    $order_qry = array();
-
-    $str_Fields = "";
-    $str_Qry = "";
-
-    $agrupacion_val = array();
-    $agrupacion_sum = array();
-    $agrupacion_des = array();
-
-    $a_getn_fields = array('sala','des_usuario','asistencia','total','link_clase');
     
-    
-// // des_marca des_tipo_vehiculo   modelo   placas   num_serie
-    $str_Fields = "sala,des_usuario,asistencia,total,link_clase";
-    $a_getl_fields = array('Sala','Responsable de la Sala','Asistencia','Total','Link');
 
+  
 
-    $a_getv_fields = array(' ', ' ', ' ', ' ', ' ', ' ');
-    $a_align_fields = array('C', 'L', 'C', 'C', 'C', 'C');
-    $a_width_fields = array('10', '23', '25', '25', '25', '25');
-
-    $boolPDF = true;
+   $paso = true;
  
+  $boolPDF = true;
 
-    $tablas_qry = " registro_horas ";
-  
-  
+
    
-
-    $paso = true;
-    $str_groupby = " ORDER BY fecha asc ";
-
-
-
-    if (sizeof($tab_asoc) > 0) {/* crea cadena de tablas asociadas */
-        foreach ($tab_asoc as $element_aqry) {
-            if (strlen(trim($str_pcWhere)) > 0)
-                $str_pcWhere .= " and ";
-            $str_pcWhere .= $element_aqry[$NTUA] . "." . $element_aqry[2] . " = " . $element_aqry[$NTUA + 3] . "." . $element_aqry[5];
-        }
-    }/* fin de cadena de tablas asociadas */
-
-    if (strlen(trim($str_pcWhere)) > 0)
-        $str_pcWhere = " WHERE " . $str_pcWhere;
-
-    $str_Qry = "SELECT sala,concat(des_usuario, '  Cel: ',color_menu)des_usuario,COUNT(asistencia)asistencia,COUNT(a.nombre)total,link_clase
-    FROM alumnos_ingreso a
-    INNER join sb_usuario b ON a.sala=b.cveuni
-    GROUP BY a.sala";
     
     $arreglo_preguntas = array();
     $arreglo_datos = array();
     $arreglo_datos_p = array();
     $classent = new Entidad($a_getn_fields, $a_getv_fields);
+
+   
     $classent->ListaEntidades(array(), "", "", "", "no", "", $str_Qry);
     $tabla_pintar_tit = "";
     $ar_th = ['', 'oscuro_1', 'claro_1'];
     $ar_tha = ['', 'table_hover_oscuro', 'table_hover_claro'];    
-    $tabla_pintar_tit = '<table width="100%" border="1" class="table table-hover color_negro tabla_sys_en rounded"  style="">';
+    $tabla_pintar_tit = '<table width="100%" CELLPADDING="5" border="1" class="table table-hover color_negro tabla_sys_en rounded"  style="">';
     $tabla_pintar_tit .= '<tr>';
     for ($index2 = 0; $index2 < count($a_getl_fields); $index2++) {
-        $tabla_pintar_tit .= '<th style="text-align:center;" class="' . $ar_th[$__SESSION->getValueSession('theme') * 1] . '">' . $a_getl_fields[$index2] . '</th>';
+        $tabla_pintar_tit .= '<th style="text-align:center; width:'. $a_width_fields[$index2].'%" class="' . $ar_th[$__SESSION->getValueSession('theme') * 1] . '">' . $a_getl_fields[$index2] . '</th>';
     }
     $tabla_pintar_tit .= '</tr>';
     $tabla_pintarxls = $tabla_pintar_tit;
@@ -189,18 +153,19 @@ global $reporte_hl;
         $tabla_pintar_tit .= '<tr class="' . $ar_tha[$__SESSION->getValueSession('theme') * 1] . '">';
         $tabla_pintarxls .= '<tr>';
         foreach ($a_getn_fields as $key => $value) {
-            $tabla_pintar_tit .= '<th colspan="" style="text-align:center;">' . ($classent->$value) . '</th>';
-            $tabla_pintarxls .= '<th colspan="" style="text-align:center;">' . ($classent->$value) . '</th>';
+         
+             $tabla_pintar_tit .= '<th style="width:'. $a_width_fields[$key].'%" >' . ($classent->$value) . '</th>';
+            $tabla_pintarxls .= '<th style="width:'. $a_width_fields[$key].'%" >' . ($classent->$value) . '</th>';
         }
         $tabla_pintar_tit .= '</tr>';
         $tabla_pintarxls .= '</tr>';
     }
     $tabla_pintar_tit .= '</table>';
     $tabla_pintarxls .= '</table>';
-    $tabla_pintarxls = $TITULO . ($tabla_pintarxls);
+    $tabla_pintarxls = $TITULO .utf8_encode($tabla_pintarxls);
     $tabla_pintar2 = $tabla_pintar_tit;
     $tabla_pintar = $TITULO . $tabla_pintar_tit;
-    $tabla_pintar2 = $TITULO . $tabla_pintar_tit;
+    $tabla_pintar2 = ($TITULO . $tabla_pintar_tit);
     $reporte_hl=$tabla_pintar2;
    //    echo $tabla_pintar;
 
