@@ -77,7 +77,7 @@ for ($i=0; $i<$classconsul->NumReg; $i++) {
        
         $field[]=array('cve_incidencia','No de incidencia','1','hidden','1','','char',"",100,200,0,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
         if ($__SESSION->getValueSession('opc') == 0 ){
-			$field[]=array('cveusuario','Quien Reporta ','1','select','2',array($per_val,$per_des),'int',0,700,20,2,'',1,1,5);
+			$field[]=array('cveusuario','Quien Reporta ','1','select','2',array($per_val,$per_des),'char',0,700,20,2,'',1,1,5);
 	
 		}else{
 			$field[]=array('cveusuario','Usuario','1','hidden','1','','char',$__SESSION->getValueSession('nomusuario'),100,200,0,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
