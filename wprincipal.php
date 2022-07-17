@@ -536,36 +536,14 @@ if ($str_check) {
 
                         <div class="container-fluid encabezado">
                             <div class="d-flex justify-content-between barrabotones">
-                                <div class="botones-izquierda">
-                               
-                                    <li class="nav-item dropdown d-flex">
-                                    <a title="Expandir/Contraer Men�" role="button" id="toggle-btn" aria-label="Expandir menu" 
-                                    href="#"  style="text-decoration:none;">
-                                        <i class="fa fa-toggle-on" id="i_tog" style="font-size: 1.5rem;" aria-hidden="true"></i>                                    
-                                        <input type="hidden" value="1" name="tog_a" id="tog_a">
-                                        </a>
-                                    </li>
-                                
-                                
-                                                           
-                                
-                                
-                                
-                                
-                                
-                                </div>
+                           
 
                                 <!-- Navbar Header-->
                                 <div class="navbar-header">
                                     <!-- Navbar Brand -->
                                         <div class="brand-text d-lg-inline-block">
                                         <img class="encabezado-escudo" src="images/escudo_edomex.svg" alt="Gobierno del Estado de M�xico">
-                                        <h1><?php
-                            if (isset($abre_s))
-                                echo $abre_s . " " . $__SESSION->getValueSession('anios_sys');
-                            else
-                                echo "";
-                                    ?></h1>
+                                       
                                         </div>
                                         
                                 </div>
@@ -577,8 +555,7 @@ if ($str_check) {
                                 <!-- Navbar Menu -->
                                     <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                                     <!-- Search-->
-                                    <li id="search" class="nav-item d-flex align-items-center punteados aj_sys" style="background:inherit;border-radius: 8px;"><a rel="nofollow" href="#" class="" role="button" aria-label="Buscar en el men�" title="Buscar en el men�"> <i class="fa fa-search" style="font-size:20px;" aria-hidden="true"></i></a></li>
-                                    <?php
+                                     <?php
                                     if ($__SESSION->getValueSession('cveperfil') == 1 or 1 == 1)
                                         echo '<li id="set_ilum" class="nav-item d-flex align-items-center punteados aj_sys" style="background:inherit;border-radius: 8px;"><a rel="nofollow" href="javascript:a_b();" class="" role="button" aria-label="Cambiar ajustes" title="Cambiar ajustes"> <i class="fa fa-cog fa-spin" style="font-size:20px;" aria-hidden="true"></i></a></li>';
                                     ?>
@@ -586,13 +563,7 @@ if ($str_check) {
                                         $usuario = explode(" ", $__SESSION->getValueSession('desusuario'));
                                         //   echo '' . $usuario[0];
                                     ?>                                    
-                                    <li class="nav-item dropdown d-flex"><a id="languages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="<?php echo $__SESSION->getValueSession('desusuario'); ?>" class="nav-link dropdown-toggle punteados fa fa-user"> 
-                                            </a> 
-                                        <ul aria-labelledby="languages" class="dropdown-menu op_u_menu rounded">
-                                            <li class="punteados"><a rel="nofollow" href="index.php?mod=6" aria-label="Cambiar clave de acceso al sistema" class="dropdown-item punteados"> <i class="fa fa-key text-white bg-warning"></i>Cambiar contrase&ntilde;a</a></li>
-                                            <li class="punteados"><a rel="nofollow" aria-label="Cerrar sesion del sistema" href="logout.php" class="dropdown-item punteados"> <i class="fa fa-power-off text-white bg-danger" style="font-size: 1rem;" ></i>Cerrar sesi&oacute;n</a></li>
-                                        </ul>
-                                    </li>                                
+                                                                   
                                     </ul>
                                 </div>   
                             </div>
