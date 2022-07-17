@@ -510,12 +510,8 @@ if ($str_check) {
             }
             echo "</head><body " . $str_print . " class='main-footer-1'>";
             ?>     
-
-        <div class="page">             
-            <!-- Main Navbar-->
-            <div id="skip-nav" class="text-center">  
-               
-            </div>             
+      <!-- Main Navbar-->
+                       
             <header class="header" role="banner" id="encabezado-interno">
                 <?php
                 if ($__SESSION->getValueSession('cveusergroup') == 1973) {
