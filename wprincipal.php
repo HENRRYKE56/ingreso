@@ -532,23 +532,7 @@ if ($str_check) {
                     ?>                
                     <div id="barra_top" class="navbar nav_sys">
                         <!-- Search Box-->
-                        <div class="search-box">
-                            <!--<button class="dismiss punteados" tabindex="0"><i class="icon-close"></i></button>-->
-                            <form id="searchForm" action="#" role="search" aria-labelledby="legend_search_m">
-                                <fieldset><legend id = "legend_search_m" style="display:none;" >Busqueda en menu </legend>
-                                    <div class="input-group mb-3">
-                                        <input type="search" id="b_en_menu" class="form-control input_text_sys" placeholder="Buscar en menu ..." aria-label="Buscar en menu ..." aria-describedby="desc_buscamenu">
-                                        <span class="input-group-text" style="display:none;" id="desc_buscamenu">La busqueda se realiza en los modulos del sistema</span>
-                                        <div class="input-group-append">
-                                            <button class="btn punteados border_l b_s_sys" onclick="manda_foco('main-menu');" type="button" style="background-color: #3cb371;" aria-label="Buscar"><i class="fa fa-search" style="color:black;" aria-hidden="true"></i>
-                                                <span class="input-group-text" style="display:none;" id="desc_botton_buscar">Buscar</span></button>
-                                            <button class="btn punteados border_l dismiss_c b_s_sys" type="button" style="background-color: #f08080;" aria-describedby="desc_botton_cerrar"><i class="fa fa-times" style="color:black;" aria-hidden="true"></i>
-                                                <span class="input-group-text" style="display:none;" id="desc_botton_cerrar">Cerrar busqueda</span></button>
-                                        </div>
-                                    </div>                            
-                                </fieldset>                        <!--<input id="b_en_menu" type="search" placeholder="Buscar en menu ..." class="form-control">-->
-                            </form>
-                        </div>
+                       
 
                         <div class="container-fluid encabezado">
                             <div class="d-flex justify-content-between barrabotones">
