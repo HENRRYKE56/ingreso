@@ -514,15 +514,7 @@ if ($str_check) {
         <div class="page">             
             <!-- Main Navbar-->
             <div id="skip-nav" class="text-center">  
-                <ul> 
-                     <?php
-                    if ($pag_centro == "entidad35.php" || $pag_centro == "md_entidad5.php") {
-                        echo '<li><a href="#tabla_datos_entidad" class="text-80 font-weight-bold h6">Saltar a la tabla de datos</a></li>';
-                    } else if ($pag_centro == "addentidad0002.php" || $pag_centro == "updentidad0002.php") {
-                        echo '<li><a href="#app_datos" class="text-80 font-weight-bold h6">Saltar formulario</a></li>';
-                    }
-                    ?>
-                </ul> 
+               
             </div>             
             <header class="header" role="banner" id="encabezado-interno">
                 <?php
