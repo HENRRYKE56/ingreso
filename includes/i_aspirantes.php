@@ -72,7 +72,7 @@ if ($str_check) {
 		$field[]=array('amaterno','Apellido Materno','1','text','1','','char',"",100,200,100,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
 		$field[]=array('curp','Curp','1','text','1','','char',"",100,200,100,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
 		$field[]=array('tel','Teléfono','1','text','1','','char',"",100,100,70,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
-		$field[]=array('email','Correo','1','text','1','','char',"",100,100,100,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
+		$field[]=array('email','Correo','1','text','1','','char',"",50,50,100,'',0,array(1,'col-12 col-md-12','col-12 col-md-3'),5);
 		$field[]=array('folio_liberacion','Folio Liberacion','1','text','1','','char',"",100,200,100,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
 		$field[]=array('plan','Plan','1','text','1','','char',"",100,200,100,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
 		$field[]=array('sala','Sala','1','text','1','','char',"",100,200,100,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
