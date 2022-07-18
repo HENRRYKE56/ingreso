@@ -46,7 +46,7 @@ if ($str_check) {
 			$strWhere="";
 		break;
 		case $__SESSION->getValueSession('cveperfil')<>1:
-			$strWhere="rfc_responsable='".$__SESSION->getValueSession('nomusuario')."'";
+			$strWhere=" where rfc_responsable='".$__SESSION->getValueSession('nomusuario')."'";
 	
 			break;
 			
