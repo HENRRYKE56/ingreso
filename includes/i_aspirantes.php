@@ -62,7 +62,7 @@ if ($str_check) {
 		//$items0='perfil.*';
 		$tabla='alumnos_ingreso';
 		$strDistintic="SELECT count(*) as count_r FROM alumnos_ingreso ";
-		$intlimit=20;
+		$intlimit=10000;
 		$a_separs=array();
 		$a_separs[]=array(1,'Datos Generales',12,'separ_verde');
        
