@@ -71,7 +71,7 @@ if ($str_check) {
 		$field[]=array('apaterno','Apellido Paterno','1','text','1','','char',"",100,200,100,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
 		$field[]=array('amaterno','Apellido Materno','1','text','1','','char',"",100,200,100,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
 		$field[]=array('curp','Curp','1','text','1','','char',"",100,200,100,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
-		$field[]=array('tel','Teléfono','1','text','1','','char',"",100,200,100,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
+		$field[]=array('tel','Teléfono','1','text','1','','char',"",100,100,70,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
 		$field[]=array('email','Correo','1','text','1','','char',"",100,200,100,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
 		$field[]=array('folio_liberacion','Folio Liberacion','1','text','1','','char',"",100,200,100,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
 		$field[]=array('plan','Plan','1','text','1','','char',"",100,200,100,'',0,array(1,'col-12 col-md-12','col-12 col-md-6'),5);
@@ -80,7 +80,7 @@ if ($str_check) {
 		///ok
 	   $a_print = array();
 		$a_identifyRow=array('curp');
-        $array_noprint_ent=array('');
+        $array_noprint_ent=array('folio');
 		$setdel='';
 		$keyFields=array('curp');
 		$keyTypeFields=array('num');	//int,text
