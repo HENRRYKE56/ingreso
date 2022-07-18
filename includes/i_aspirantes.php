@@ -41,8 +41,16 @@ if ($str_check) {
 		'10 - longitud maxima en caja de texto', '11 - cadena de validaci&oacute;n', 12 - requiered);*/
 		$entidad='Listado de Alunomnos  Examen de Ingreso ENSVT';
 		$id_prin='nombre ';
+		switch ($__SESSION->getValueSession('cveperfil')){
+			case 1:
 			$strWhere="";
-		
+		break;
+		case $__SESSION->getValueSession('cveperfil')<>1:
+			$strWhere="rfc_responsable='".$__SESSION->getValueSession('nomusuario')."'";
+	
+			break;
+			
+	}
 
 	$a_order=array("nombre asc");
 		
