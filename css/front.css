@@ -916,11 +916,11 @@ div.numberStep {
     color:#000 !important;    
 }
 .claro_b:hover{
-    background-color: #0a7e16 !important;
+    background-color: #054826 !important;
     /*color:red !important;*/        
 }
 .input_t_claro{
-    background-color: #06541b !important;
+    background-color: #F9F9FA !important;
     background-clip: padding-box !important;
     border: 1px solid #142438 !important;    
     color:black !important;
@@ -937,7 +937,7 @@ div.numberStep {
     color: black !important;
 }
 .claro_bread,.claro_bread:before{
-    background-color: #0d7806 !important;
+    background-color: #F2F2F2 !important;
     color:black !important;        
     font-weight: bold;
 }
@@ -946,7 +946,7 @@ div.numberStep {
     /*font-weight: bold;*/
 }
 .table_hover_claro{
-    background-color:  #075e0f !important;
+    background-color:  #F9FAFD !important;
     color:black !important;
     border-top: 0px solid #212121;
     font-weight: 400;    
