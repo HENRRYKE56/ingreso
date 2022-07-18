@@ -88,7 +88,7 @@ if ($str_check) {
 		///ok
 	   $a_print = array();
 		$a_identifyRow=array('curp');
-        $array_noprint_ent=array('folio');
+        $array_noprint_ent=array('');
 		$setdel='';
 		$keyFields=array('curp');
 		$keyTypeFields=array('num');	//int,text
