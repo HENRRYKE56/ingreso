@@ -531,6 +531,19 @@ if ($str_check) {
                        
 
                         <div class="container-fluid encabezado">
+                        <div class="botones-izquierda">
+                               
+                               <li class="nav-item dropdown d-flex">
+                               <a title="Expandir/Contraer Men�" role="button" id="toggle-btn" aria-label="Expandir menu" 
+                               href="#"  style="text-decoration:none;">
+                                   <i class="fa fa-toggle-on" id="i_tog" style="font-size: 1.5rem;" aria-hidden="true"></i>                                    
+                                   <input type="hidden" value="1" name="tog_a" id="tog_a">
+                                   </a>
+                               </li>
+                           
+                           
+                           </div>
+
                             <div class="d-flex justify-content-between barrabotones">
                            
 
