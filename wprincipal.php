@@ -531,7 +531,10 @@ if ($str_check) {
                        
 
                         <div class="container-fluid encabezado">
-                        <div class="botones-izquierda">
+                       
+
+                            <div class="d-flex justify-content-between barrabotones">
+                            <div class="botones-izquierda">
                                
                                <li class="nav-item dropdown d-flex">
                                <a title="Expandir/Contraer Men�" role="button" id="toggle-btn" aria-label="Expandir menu" 
@@ -543,9 +546,6 @@ if ($str_check) {
                            
                            
                            </div>
-
-                            <div class="d-flex justify-content-between barrabotones">
-                           
 
                                 <!-- Navbar Header-->
                                 <div class="navbar-header">
